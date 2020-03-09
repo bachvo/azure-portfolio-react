@@ -12,7 +12,6 @@ import "./styles/app.scss";
 export default class App extends React.Component {
   render() {
     const isDevMode = process.env.NODE_ENV === "development";
-
     const devRender = (
       <Router>
         <ul className="nav">
