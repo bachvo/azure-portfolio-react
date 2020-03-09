@@ -32,4 +32,4 @@ jobs:
         app-name: 'azure-portfolio-react'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_a098a8b605544a9a984dc56b54bcffc9 }}
-        package: .
+        package: ./build
