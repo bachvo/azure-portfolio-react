@@ -10,6 +10,8 @@ import "./styles/app.scss";
 
 export default class App extends React.Component {
   render() {
+    const date = new Date();
+    const currentYear = date.getFullYear();
     const isDevMode = process.env.NODE_ENV === "development";
     const devRender = (
       <Router>
@@ -45,6 +47,9 @@ export default class App extends React.Component {
             <Contact />
           </Route>
         </Switch>
+        <footer>
+          <p>©{currentYear} Bach Vo</p>
+        </footer>
       </Router>
     );
     const prodRender = <UnderConstruction />;

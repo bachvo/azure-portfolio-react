@@ -11,6 +11,34 @@
   height: 300px;
 }
 
-.home__about-skill-list {
-  list-style: none;
+.home__section-description {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: $item-spacing-4;
+}
+
+.home__workexp {
+  color: white;
+  background-color: $turquoise;
+}
+
+.home__projects {
+  color: white;
+  background-color: $dark-blue;
+}
+
+.home__contact {
+  color: white;
+  background-color: $dark-beige;
+}
+
+.home__card {
+  color: black;
+}
+
+.home__contact-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
 }
