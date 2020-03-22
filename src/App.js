@@ -6,7 +6,6 @@ import Home from "./components/home";
 import WorkExperience from "./components/work-experience";
 import Contact from "./components/contact";
 import UnderConstruction from "./components/under-construction";
-
 import "./styles/app.scss";
 
 export default class App extends React.Component {
@@ -15,6 +14,9 @@ export default class App extends React.Component {
     const devRender = (
       <Router>
         <ul className="nav">
+          <li>
+            <Link to="/"><img alt="" className="nav__logo-top-image" src="images/logo-top.png"/></Link>
+          </li>
           <li>
             <Link to="/">Home</Link>
           </li>
