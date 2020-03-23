@@ -4,14 +4,15 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import About from "./components/about";
 import Home from "./components/home";
 import WorkExperience from "./components/work-experience";
-import Contact from "./components/contact";
+import Projects from "./components/projects";
+import Footer from "./components/footer";
 import UnderConstruction from "./components/under-construction";
+
+import { model } from "./models/main";
 import "./styles/app.scss";
 
 export default class App extends React.Component {
   render() {
-    const date = new Date();
-    const currentYear = date.getFullYear();
     const isDevMode = process.env.NODE_ENV === "development";
     const devRender = (
       <Router>
@@ -29,32 +30,47 @@ export default class App extends React.Component {
             <Link to="/workexperience">Work Experience</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+          <div className="nav__contact-dropdown dropdown">
+            <button className="btn btn-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Contact
+            </button>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+              {model.contactInfo.map(item => {
+                return (
+                  <a key={item.type} className="dropdown-item" href={item.href} target="_blank">{item.type}</a>
+                );
+              })}
+              <div className="dropdown-divider"></div>
+              <a className="dropdown-item" href="resources/resume/bachvo.resume.pdf" target="_blank">Resume</a>
+            </div>
+          </div>
           </li>
         </ul>
-
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/workexperience">
-            <WorkExperience />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
-        <footer>
-          <p>©{currentYear} Bach Vo</p>
-        </footer>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <Home model={model} />
+            </Route>
+            <Route path="/about">
+              <About model={model} />
+            </Route>
+            <Route path="/workexperience">
+              <WorkExperience model={model} />
+            </Route>
+            <Route path="/projects">
+              <Projects model={model} />
+            </Route>
+          </Switch>
+          <Footer model={model} />
+        </main>
       </Router>
     );
     const prodRender = <UnderConstruction />;
 
-    const shouldRender = isDevMode ? devRender : prodRender;
+    const shouldRender = true ? devRender : prodRender;
     return shouldRender;
   }
 }

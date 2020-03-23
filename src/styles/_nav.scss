@@ -13,3 +13,7 @@ $nav-logo-top-image-size: 70px;
   height: $nav-logo-top-image-size;
   width: $nav-logo-top-image-size;
 }
+
+.nav__contact-dropdown {
+  top: -($item-spacing-2) + 2px;
+}
