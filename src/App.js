@@ -40,7 +40,7 @@ export default class App extends React.Component {
               <button className="btn btn-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Contact
               </button>
-              <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <div className="dropdown-menu dropdown-menu-md-left dropdown-menu-lg-right" aria-labelledby="dropdownMenu2">
                 {model.contactInfo.map(item => {
                   return (
                     <a key={item.type} className="dropdown-item" href={item.href} target="_blank">{item.type}</a>
