@@ -3,9 +3,10 @@ import React from "react";
 export default class WorkExperience extends React.Component {
   render() {
     return (
-      <section className="home__projects d-flex flex-column align-items-center p-5">
+      <section className="home__projects d-flex flex-column p-5">
+        <div className="container">
         <h2>{this.props.model.workExpTitle}</h2>
-        <p className="home__section-description">{this.props.model.workExpDescription}</p>
+        <p>{this.props.model.workExpDescription}</p>
         <div className="row row-cols-1 row-cols-md-4">
           {this.props.model.workExpCards.map((item, key) => {
             return (
@@ -20,6 +21,7 @@ export default class WorkExperience extends React.Component {
               </div>
             );
           })}
+        </div>
         </div>
       </section>
     );
