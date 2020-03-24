@@ -1,21 +1,21 @@
 import React from "react";
 import { HashLink as Link } from 'react-router-hash-link';
-
-function capitalize(str){
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
+import { ANCHOR } from '../utils/constants';
+import { capitalize } from '../utils/capitalize';
+import { hashLinkUrl } from '../utils/hash-link-url';
 
 export default class CardDetail extends React.Component {
   render() {
     const urlParamId = parseInt(this.props.match.params.id);
     const cardObject = this.props.collection.find(item => item.id === urlParamId);
-    const linkToUrl = `/#${this.props.type}`;
+    const linkToUrl = hashLinkUrl(this.props.type);
+    const homeAnchor = hashLinkUrl(ANCHOR.HOME);
 
     return (
       <div>
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
-            <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+            <li className="breadcrumb-item"><Link to={homeAnchor}>{capitalize(ANCHOR.HOME)}</Link></li>
             <li className="breadcrumb-item"><Link to={linkToUrl}>{capitalize(this.props.type)}</Link></li>
             <li className="breadcrumb-item active" aria-current="page">{cardObject.title}</li>
           </ol>

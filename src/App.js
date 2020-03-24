@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 import UnderConstruction from "./components/under-construction";
 
 import { ANCHOR } from './utils/constants';
+import { hashLinkUrl } from './utils/hash-link-url';
 
 import { model } from "./models/main";
 import "./styles/app.scss";
@@ -16,10 +17,10 @@ import "./styles/app.scss";
 export default class App extends React.Component {
   render() {
     const isDevMode = process.env.NODE_ENV === "development";
-    const aboutAnchor = `/#${ANCHOR.ABOUT}`;
-    const homeAnchor = `/#${ANCHOR.HOME}`;
-    const projectsAnchor = `/#${ANCHOR.PROJECTS}`;
-    const workexpAnchor = `/#${ANCHOR.WORKEXP}`;
+    const aboutAnchor = hashLinkUrl(ANCHOR.ABOUT);
+    const homeAnchor = hashLinkUrl(ANCHOR.HOME);
+    const projectsAnchor = hashLinkUrl(ANCHOR.PROJECTS);
+    const workexpAnchor = hashLinkUrl(ANCHOR.WORKEXP);
 
     const devRender = (
       <Router>

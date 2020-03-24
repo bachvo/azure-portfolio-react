@@ -16,7 +16,7 @@ export default class CardCollection extends React.Component {
               return (
                 <Link key={key} to={url}>
                   <div className="col mb-4">
-                    <div className="home__card card h-100">
+                    <div className="home__card card">
                       <img src={item.imgSrc} className="card-img-top" alt=""/>
                       <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>
