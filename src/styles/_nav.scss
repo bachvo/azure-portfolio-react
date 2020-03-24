@@ -5,3 +5,10 @@ $nav-logo-top-image-size: 40px;
   height: $nav-logo-top-image-size;
   width: $nav-logo-top-image-size;
 }
+
+.nav__anchor {
+  display: block;
+  position: relative;
+  top: -66px;
+  visibility: hidden;
+}

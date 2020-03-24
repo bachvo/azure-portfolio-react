@@ -14,7 +14,8 @@ export default class Home extends React.Component {
           <img alt="" className="home__landing-page-image" src="images/landing_page.png"/>
         </section>
 
-        <section id="about" className="home__projects d-flex flex-column align-items-md-start align-items-lg-left p-5">
+        <a className="nav__anchor" id="about"></a>
+        <section className="home__projects d-flex flex-column align-items-md-start align-items-lg-left p-5">
           <div className="container d-flex flex-column">
             <div className="d-flex row row-cols-1 row-cols-md-3">
               <div className="card h-100 col-md-3 p-0">
