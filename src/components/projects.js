@@ -10,7 +10,7 @@ export default class Projects extends React.Component {
           {this.props.model.projectCards.map((item, key) => {
             return (
               <div key={key} className="col mb-4">
-                <div className="home__card card h-100">
+                <div className="card h-100">
                   <img src={item.imgSrc} className="card-img-top" alt=""/>
                   <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>

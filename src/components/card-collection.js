@@ -1,17 +1,17 @@
 import React from "react";
 
-export default class WorkExperience extends React.Component {
+export default class CardCollection extends React.Component {
   render() {
+    const concatClass = `${this.props.classNames} d-flex flex-column align-items-md-start align-items-lg-center p-5`
     return (
-      <section className="home__projects d-flex flex-column p-5">
-        <div className="container">
-        <h2>{this.props.model.workExpTitle}</h2>
-        <p>{this.props.model.workExpDescription}</p>
+      <section id={this.props.id} className={concatClass}>
+        <h2>{this.props.title}</h2>
+        <p className="home__section-description text-md-left text-lg-center pb-4">{this.props.description}</p>
         <div className="row row-cols-1 row-cols-md-4">
-          {this.props.model.workExpCards.map((item, key) => {
+          {this.props.cards.map((item, key) => {
             return (
               <div key={key} className="col mb-4">
-                <div className="card h-100">
+                <div className="home__card card h-100">
                   <img src={item.imgSrc} className="card-img-top" alt=""/>
                   <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
@@ -21,7 +21,6 @@ export default class WorkExperience extends React.Component {
               </div>
             );
           })}
-        </div>
         </div>
       </section>
     );

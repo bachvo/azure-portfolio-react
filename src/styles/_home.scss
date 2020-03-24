@@ -3,10 +3,6 @@
   background-color: $beige;
 }
 
-.home__landing-page-image {
-  height: 300px;
-}
-
 .home__section-description {
   max-width: 700px;
 }
@@ -23,4 +19,15 @@
 
 .home__card {
   color: black;
+}
+
+.home__landing-page-image {
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .home__landing-page-image {
+    width: 100%;
+    height: auto;
+  }
 }

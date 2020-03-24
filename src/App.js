@@ -27,13 +27,13 @@ export default class App extends React.Component {
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
+                <a className="nav-link" href="/#about">About</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/workexperience">Work Experience</Link>
+                <a className="nav-link" href="/#workexperience">Work Experience</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">Projects</Link>
+                <a className="nav-link" href="/#projects">Projects</a>
               </li>
             </ul>
             <div className="dropdown">
