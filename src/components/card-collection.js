@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class CardCollection extends React.Component {
   render() {
@@ -11,16 +12,19 @@ export default class CardCollection extends React.Component {
           <p className="home__section-description text-md-left text-lg-center pb-4">{this.props.description}</p>
           <div className="row row-cols-1 row-cols-md-4">
             {this.props.cards.map((item, key) => {
+              const url = `/${this.props.id}/${item.id}`
               return (
-                <div key={key} className="col mb-4">
-                  <div className="home__card card h-100">
-                    <img src={item.imgSrc} className="card-img-top" alt=""/>
-                    <div className="card-body">
-                      <h5 className="card-title">{item.title}</h5>
-                      <p className="card-text">{item.position}</p>
+                <Link key={key} to={url}>
+                  <div className="col mb-4">
+                    <div className="home__card card h-100">
+                      <img src={item.imgSrc} className="card-img-top" alt=""/>
+                      <div className="card-body">
+                        <h5 className="card-title">{item.title}</h5>
+                        <p className="card-text">{item.position}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

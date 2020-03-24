@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import About from "./components/about";
 import Home from "./components/home";
-import WorkExperience from "./components/work-experience";
-import Projects from "./components/projects";
+import CardDetail from "./components/card-detail";
 import Footer from "./components/footer";
 import UnderConstruction from "./components/under-construction";
+
+import { ANCHOR } from './utils/constants';
 
 import { model } from "./models/main";
 import "./styles/app.scss";
@@ -14,6 +15,10 @@ import "./styles/app.scss";
 export default class App extends React.Component {
   render() {
     const isDevMode = process.env.NODE_ENV === "development";
+    const aboutAnchor = `/#${ANCHOR.ABOUT}`;
+    const projectsAnchor = `/#${ANCHOR.PROJECTS}`;
+    const workexpAnchor = `/#${ANCHOR.WORKEXP}`;
+
     const devRender = (
       <Router>
         <nav className="navbar sticky-top navbar-expand-md navbar-light bg-light">
@@ -27,13 +32,13 @@ export default class App extends React.Component {
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/#about">About</a>
+                <a className="nav-link" href={aboutAnchor} >About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/#workexperience">Work Experience</a>
+                <a className="nav-link" href={workexpAnchor} >Work Experience</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/#projects">Projects</a>
+                <a className="nav-link" href={projectsAnchor}>Projects</a>
               </li>
             </ul>
             <div className="dropdown">
@@ -54,18 +59,23 @@ export default class App extends React.Component {
         </nav>
         <main>
           <Switch>
-            <Route exact path="/">
-              <Home model={model} />
-            </Route>
-            <Route path="/about">
-              <About model={model} />
-            </Route>
-            <Route path="/workexperience">
-              <WorkExperience model={model} />
-            </Route>
-            <Route path="/projects">
-              <Projects model={model} />
-            </Route>
+            <Route 
+              exact
+              path="/" 
+              render={props => (<Home {...props} model={model}/>)}
+            />
+            <Route 
+              path="/about" 
+              render={props => (<About {...props} model={model}/>)}
+            />
+            <Route 
+              path="/workexp/:id" 
+              render={props => (<CardDetail {...props} collection={model.workExpCards} type={ANCHOR.WORKEXP}/>)}
+            />
+            <Route 
+              path="/projects/:id" 
+              render={props => (<CardDetail {...props} collection={model.projectCards} type={ANCHOR.PROJECTS}/>)}
+            />
           </Switch>
           <Footer model={model} />
         </main>

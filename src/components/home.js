@@ -1,8 +1,7 @@
 import React from "react";
 import CardCollection from "./card-collection";
-
 import { createMarkup } from '../utils/create-markup';
-import { Link } from "react-router-dom";
+import { ANCHOR } from '../utils/constants';
 
 export default class Home extends React.Component {
   render() {
@@ -50,7 +49,7 @@ export default class Home extends React.Component {
 
         <CardCollection
           classNames="home__workexp"
-          id="workexperience"
+          id={ANCHOR.WORKEXP}
           title={this.props.model.workExpTitle}
           description={this.props.model.workExpDescription}
           cards={this.props.model.workExpCards}
@@ -58,7 +57,7 @@ export default class Home extends React.Component {
 
         <CardCollection
           classNames="home__projects"
-          id="projects"
+          id={ANCHOR.PROJECTS}
           title={this.props.model.projectTitle}
           description={this.props.model.projectDescription}
           cards={this.props.model.projectCards}
