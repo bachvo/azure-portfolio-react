@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
 import About from "./components/about";
 import Home from "./components/home";
@@ -16,29 +17,32 @@ export default class App extends React.Component {
   render() {
     const isDevMode = process.env.NODE_ENV === "development";
     const aboutAnchor = `/#${ANCHOR.ABOUT}`;
+    const homeAnchor = `/#${ANCHOR.HOME}`;
     const projectsAnchor = `/#${ANCHOR.PROJECTS}`;
     const workexpAnchor = `/#${ANCHOR.WORKEXP}`;
 
     const devRender = (
       <Router>
         <nav className="navbar sticky-top navbar-expand-md navbar-light bg-light">
-          <Link className="navbar-brand" to="/"><img alt="" className="nav__logo-top-image" src="images/logo-top.png"/></Link>
+          <Link className="navbar-brand" to={homeAnchor}>
+            <img alt="" className="nav__logo-top-image" src="/images/logo-top.png"/>
+          </Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to={homeAnchor}>Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={aboutAnchor} >About</a>
+                <Link className="nav-link" to={aboutAnchor}>About</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={workexpAnchor} >Work Experience</a>
+                <Link className="nav-link" to={workexpAnchor}>Work Experience</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={projectsAnchor}>Projects</a>
+                <Link className="nav-link" to={projectsAnchor}>Projects</Link>
               </li>
             </ul>
             <div className="dropdown">

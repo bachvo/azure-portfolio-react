@@ -7,13 +7,14 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
+        <a className="nav__anchor" id={ANCHOR.HOME}></a>
         <section className="home d-flex flex-column align-items-md-start align-items-lg-center p-5">
           <h2>{this.props.model.introTitle}</h2>
           <p className="home__section-description text-md-left text-lg-center pb-4" dangerouslySetInnerHTML={createMarkup(this.props.model.introDescription)}></p>
           <img alt="" className="home__landing-page-image" src="images/landing_page.png"/>
         </section>
 
-        <a className="nav__anchor" id="about"></a>
+        <a className="nav__anchor" id={ANCHOR.ABOUT}></a>
         <section className="home__projects d-flex flex-column align-items-md-start align-items-lg-left p-5">
           <div className="container d-flex flex-column">
             <div className="d-flex row row-cols-1 row-cols-md-3">

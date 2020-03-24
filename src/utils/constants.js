@@ -1,5 +1,6 @@
 export const ANCHOR = {
+  ABOUT: 'about',
+  HOME: 'home',
   PROJECTS: 'projects',
   WORKEXP: 'workexp',
-  ABOUT: 'about',
 }
