@@ -21,7 +21,7 @@ export default class Footer extends React.Component {
             })}
           </div>
         </section>
-      <p className="footer__copyright">©{currentYear} Bach Vo</p>
+        <p className="footer__copyright">©{currentYear} {this.props.model.profile.fullName}</p>
     </footer>
     );
   }

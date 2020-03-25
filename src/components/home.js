@@ -21,14 +21,13 @@ export default class Home extends React.Component {
               <div className="card h-100 col-md-3 p-0">
                 <img className="card-img-top" alt="" src="images/bach_small.jpg" width="200" />
                 <div className="card-body">
-                  <h5 className="card-title">Bach Vo</h5>
-                  <p className="card-text">Software Engineer</p>
+                  <h5 className="card-title">{this.props.model.profile.fullName}</h5>
+                  <p className="card-text">{this.props.model.profile.occupation}</p>
                 </div>
               </div>
               <div className="col-md-9 pt-4 pt-md-0 pl-0 pl-md-5">
-                <h2>{this.props.model.aboutTitle}</h2>
-                <p dangerouslySetInnerHTML={createMarkup(this.props.model.aboutDescription)}></p>
-                <p>{this.props.model.aboutSkills}</p>
+                <h2>{this.props.model.profile.fullName}</h2>
+                <p dangerouslySetInnerHTML={createMarkup(this.props.model.profile.description)}></p>
               </div>
             </div>
           </div>
@@ -36,7 +35,7 @@ export default class Home extends React.Component {
 
         <section className="d-flex flex-column align-items-md-start align-items-lg-center px-2 py-4 p-md-5">
           <div className="d-flex row row-cols-1 row-cols-md-3">
-            {this.props.model.aboutMeSkills.map((item, key) => {
+            {this.props.model.profile.skills.map((item, key) => {
               return (
                 <div key={key} className="d-flex flex-column align-items-md-start align-items-lg-center col">
                   <img src={item.imgSrc} height="200" width="200" alt=""/>
@@ -51,17 +50,13 @@ export default class Home extends React.Component {
         <CardCollection
           classNames="home__workexp"
           id={ANCHOR.WORKEXP}
-          title={this.props.model.workExpTitle}
-          description={this.props.model.workExpDescription}
-          cards={this.props.model.workExpCards}
+          model={this.props.model.workExp}
         />
 
         <CardCollection
           classNames="home__projects"
           id={ANCHOR.PROJECTS}
-          title={this.props.model.projectTitle}
-          description={this.props.model.projectDescription}
-          cards={this.props.model.projectCards}
+          model={this.props.model.projects}
         />
       </div>
     );

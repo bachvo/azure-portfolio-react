@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
 
-import About from "./components/about";
 import Home from "./components/home";
 import CardDetail from "./components/card-detail";
 import Footer from "./components/footer";
@@ -68,16 +67,12 @@ export default class App extends React.Component {
               render={props => (<Home {...props} model={model}/>)}
             />
             <Route 
-              path="/about" 
-              render={props => (<About {...props} model={model}/>)}
-            />
-            <Route 
               path="/workexp/:id" 
-              render={props => (<CardDetail {...props} collection={model.workExpCards} type={ANCHOR.WORKEXP}/>)}
+              render={props => (<CardDetail {...props} collection={model.workExp.cards} type={ANCHOR.WORKEXP}/>)}
             />
             <Route 
               path="/projects/:id" 
-              render={props => (<CardDetail {...props} collection={model.projectCards} type={ANCHOR.PROJECTS}/>)}
+              render={props => (<CardDetail {...props} collection={model.projects.cards} type={ANCHOR.PROJECTS}/>)}
             />
           </Switch>
           <Footer model={model} />
