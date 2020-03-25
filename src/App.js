@@ -68,7 +68,7 @@ export default class App extends React.Component {
                   );
                 })}
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="resources/resume/bachvo.resume.pdf" target="_blank">Resume</a>
+                <a className="dropdown-item" href="/resources/resume/bachvo.resume.pdf" target="_blank">Resume</a>
               </div>
             </div>
           </div>
