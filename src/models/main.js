@@ -126,7 +126,7 @@ export const model = {
       title: 'Ventus',
       description: 'Ventus is an ambient heating device drawn from inspirations of past precedents of early 1950\'s design and heating/cooling devices. Ventus is primarily made of acrylic because the material is durable, light weight and strong enough to be hung from the ceiling. The rods that extend down from the platform are made of wood and the blades that are attached to the rods are hand made from MDF wood and paper. Arduino was implemented to power the rods and fans and from there, mobile devices were explored to create interactivity with the user. A Bluetooth chip Arduino microcontroller is used to calculate the accelerometer of the users phone to activate and de-activate the fan as the user interacts with his/her phone. The rods rotate from 4 servo motors that are attached to gears to be able to spin 13 rods. Users can control which direction the fan rotates as well as the speed of the rotation by simply moving the phone in the same direction and the degree in which the phone is tilted.',
       position: 'Programmer',
-      role: 'Ventus is an ambient heating device drawn from inspirations of past precedents of early 1950\'s design and heating/cooling devices. Ventus is primarily made of acrylic because the material is durable, light weight and strong enough to be hung from the ceiling. The rods that extend down from the platform are made of wood and the blades that are attached to the rods are hand made from MDF wood and paper. Arduino was implemented to power the rods and fans and from there, mobile devices were explored to create interactivity with the user. A Bluetooth chip Arduino microcontroller is used to calculate the accelerometer of the users phone to activate and de-activate the fan as the user interacts with his/her phone. The rods rotate from 4 servo motors that are attached to gears to be able to spin 13 rods. Users can control which direction the fan rotates as well as the speed of the rotation by simply moving the phone in the same direction and the degree in which the phone is tilted.',
+      role: 'I was the lead engineer for the team. I was responsible for the Arduino and SolidWorks portion of the project',
       skills: [
         'Arduino',
         'SolidWorks',
@@ -150,7 +150,7 @@ export const model = {
     website: 'https://www.vimeo.com/64613691',
     description: 'The concept of this project is to create a "mobile DJ" that simulates the use of a DJ Mix Table using a series of physical actions performed by the DJ and a pair of gloves. Being wirelessly connected his wearable hands-on device, this provides the DJ with the ability and freedom to walk around and control the sound, urgency and volume of his tracks through simple hand gestures. The inclusion of the Mobile DJ, will not only give DJ\'s the freedom of not having to be around his mix table for the entire night, but also allow the user to have deeper interactions with the crowd and his audience through dance and movement.',
     position: 'Programmer',
-    role: 'The concept of this project is to create a "mobile DJ" that simulates the use of a DJ Mix Table using a series of physical actions performed by the DJ and a pair of gloves. Being wirelessly connected his wearable hands-on device, this provides the DJ with the ability and freedom to walk around and control the sound, urgency and volume of his tracks through simple hand gestures. The inclusion of the Mobile DJ, will not only give DJ\'s the freedom of not having to be around his mix table for the entire night, but also allow the user to have deeper interactions with the crowd and his audience through dance and movement.',
+    role: 'I was the lead Ardiuno developer for our team.',
     skills: [
       'Arduino',
     ],
@@ -170,7 +170,7 @@ export const model = {
     website: 'https://github.com/bachvo/Android',
     description: 'Manifesto is a smartphone application that designed for individual or social groups to plan meetings. It allows user to offset a position on the map using GPS function. User can choose a specific point on the map as his/her target location. After that user will be able to share the location to his/her contacts. Any web browser can read the position information, so that users who received the information can view the location on their own device. Not only that, location information can be saved in the app as “favorites” so that user will be able to access their favorite location easily. Furthermore, the app will have a real-time tracking system to allow users in the group to view all group members’ current location. Overall, Manifesto will enhance communication between friends and improve the event organization between social groups.',
     position: 'Programmer',
-    role: 'Manifesto is a smartphone application that designed for individual or social groups to plan meetings. It allows user to offset a position on the map using GPS function. User can choose a specific point on the map as his/her target location. After that user will be able to share the location to his/her contacts. Any web browser can read the position information, so that users who received the information can view the location on their own device. Not only that, location information can be saved in the app as “favorites” so that user will be able to access their favorite location easily. Furthermore, the app will have a real-time tracking system to allow users in the group to view all group members’ current location. Overall, Manifesto will enhance communication between friends and improve the event organization between social groups.',
+    role: 'I was the lead Android Developer for the team.',
     skills: [
       'Android',
       'Java',
@@ -192,7 +192,7 @@ export const model = {
     downloadLink: './assets/resources/quicam/evaluation.pdf',
     description: 'QuiCam is an app built for Google Glass that gives users the ability to find the users points of interest and photo edit images in real-time, as the user is taking the photo. This real-time action allows users to see photos being mixed and edited before even taking the picture, giving the user live feedback to the brightness, contrast, hue, saturation, and positioning.',
     position: 'User Interface Designer',
-    role: 'QuiCam is an app built for Google Glass that gives users the ability to find the users points of interest and photo edit images in real-time, as the user is taking the photo. This real-time action allows users to see photos being mixed and edited before even taking the picture, giving the user live feedback to the brightness, contrast, hue, saturation, and positioning.',
+    role: 'I was the user interface designer and the user researcher for this project.',
     skills: [
       'User Research',
       'Design Evaluation',
