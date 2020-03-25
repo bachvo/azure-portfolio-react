@@ -213,7 +213,7 @@ export const model = {
   contactInfo: [
     {
       type: 'Email',
-      href: 'mailto:info@bachvo.com',
+      href: 'mailto:bach.vo604@gmail.com',
       imgSrc: '/images/email.png'
     },
     {
