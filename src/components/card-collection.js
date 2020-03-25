@@ -9,14 +9,14 @@ export default class CardCollection extends React.Component {
         <a className="nav__anchor" id={this.props.id}></a>
         <div className={concatClass}>
           <h2>{this.props.model.title}</h2>
-          <p className="home__section-description text-md-left text-lg-center pb-4">{this.props.model.description}</p>
+          <p className="max-width-700-px text-md-left text-lg-center pb-4">{this.props.model.description}</p>
           <div className="row row-cols-1 row-cols-md-4">
             {this.props.model.cards.map((item, key) => {
               const url = `/${this.props.id}/${item.id}`
               return (
                 <Link key={key} to={url}>
                   <div className="col mb-4">
-                    <div className="home__card card">
+                    <div className="card-collection__text-black card">
                       <img src={item.imgSrc} className="card-img-top" alt=""/>
                       <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>

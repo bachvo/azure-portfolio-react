@@ -8,14 +8,14 @@ export default class Home extends React.Component {
     return (
       <div>
         <a className="nav__anchor" id={ANCHOR.HOME}></a>
-        <section className="home d-flex flex-column align-items-md-start align-items-lg-center px-2 py-4 p-md-5">
+        <section className="home__intro d-flex flex-column align-items-md-start align-items-lg-center px-2 py-4 p-md-5">
           <h2>{this.props.model.introTitle}</h2>
-          <p className="home__section-description text-md-left text-lg-center pb-4" dangerouslySetInnerHTML={createMarkup(this.props.model.introDescription)}></p>
+          <p className="max-width-700-px text-md-left text-lg-center pb-4" dangerouslySetInnerHTML={createMarkup(this.props.model.introDescription)}></p>
           <img alt="" className="home__landing-page-image" src="images/landing_page.png"/>
         </section>
 
         <a className="nav__anchor" id={ANCHOR.ABOUT}></a>
-        <section className="home__projects d-flex flex-column align-items-md-start align-items-lg-left px-2 py-4 p-md-5">
+        <section className="background-section d-flex flex-column align-items-md-start align-items-lg-left px-2 py-4 p-md-5">
           <div className="container d-flex flex-column">
             <div className="d-flex row row-cols-1 row-cols-md-3">
               <div className="card h-100 col-md-3 p-0">
@@ -54,7 +54,7 @@ export default class Home extends React.Component {
         />
 
         <CardCollection
-          classNames="home__projects"
+          classNames="background-section"
           id={ANCHOR.PROJECTS}
           model={this.props.model.projects}
         />

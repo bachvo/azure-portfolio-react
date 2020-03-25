@@ -22,7 +22,7 @@ export default class CardDetail extends React.Component {
           </ol>
         </nav>
 
-        <section className="home__projects d-flex flex-column px-2 py-4 p-md-5">
+        <section className="background-section d-flex flex-column px-2 py-4 p-md-5">
           <div className="container">
             <div className="row row-cols-1">
             <div className="col col-md-4">

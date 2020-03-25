@@ -73,7 +73,7 @@ export default class App extends React.Component {
             </div>
           </div>
         </nav>
-        <main>
+        <main class="overflow-x-hidden">
           <Switch>
             <Route 
               exact
