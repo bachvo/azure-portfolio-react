@@ -6,7 +6,6 @@ import About from "./components/about";
 import Home from "./components/home";
 import CardDetail from "./components/card-detail";
 import Footer from "./components/footer";
-import UnderConstruction from "./components/under-construction";
 
 import { ANCHOR } from './utils/constants';
 import { hashLinkUrl } from './utils/hash-link-url';
@@ -16,13 +15,12 @@ import "./styles/app.scss";
 
 export default class App extends React.Component {
   render() {
-    const isDevMode = process.env.NODE_ENV === "development";
     const aboutAnchor = hashLinkUrl(ANCHOR.ABOUT);
     const homeAnchor = hashLinkUrl(ANCHOR.HOME);
     const projectsAnchor = hashLinkUrl(ANCHOR.PROJECTS);
     const workexpAnchor = hashLinkUrl(ANCHOR.WORKEXP);
 
-    const devRender = (
+    return (
       <Router>
         <nav className="navbar sticky-top navbar-expand-md navbar-light bg-light">
           <Link className="navbar-brand" to={homeAnchor}>
@@ -86,9 +84,5 @@ export default class App extends React.Component {
         </main>
       </Router>
     );
-    const prodRender = <UnderConstruction />;
-
-    const shouldRender = true ? devRender : prodRender;
-    return shouldRender;
   }
 }
