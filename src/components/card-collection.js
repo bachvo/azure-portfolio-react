@@ -3,7 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 export default class CardCollection extends React.Component {
   render() {
-    const concatClass = `${this.props.classNames} d-flex flex-column align-items-md-start align-items-lg-center p-5`
+    const concatClass = `${this.props.classNames} d-flex flex-column align-items-md-start align-items-lg-center px-2 py-4 p-md-5`
     return (
       <section>
         <a className="nav__anchor" id={this.props.id}></a>
