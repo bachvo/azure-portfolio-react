@@ -25,10 +25,18 @@ export default class App extends React.Component {
           <Link className="navbar-brand" to={homeAnchor}>
             <img alt="" className="nav__logo-top-image" src="/images/logo-top.png"/>
           </Link>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <button 
+            className="navbar-toggler" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarToggler" 
+            aria-controls="navbarToggler" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <div className="collapse navbar-collapse" id="navbarToggler">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
                 <Link className="nav-link" to={homeAnchor}>Home</Link>
@@ -44,10 +52,16 @@ export default class App extends React.Component {
               </li>
             </ul>
             <div className="dropdown">
-              <button className="btn btn-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button 
+                className="btn btn-link dropdown-toggle" 
+                type="button" id="contactDropdownMenu" 
+                data-toggle="dropdown" 
+                aria-haspopup="true" 
+                aria-expanded="false"
+              >
                 Contact
               </button>
-              <div className="dropdown-menu dropdown-menu-md-left dropdown-menu-lg-right" aria-labelledby="dropdownMenu2">
+              <div className="dropdown-menu dropdown-menu-md-left dropdown-menu-lg-right" aria-labelledby="contactDropdownMenu">
                 {model.contactInfo.map(item => {
                   return (
                     <a key={item.type} className="dropdown-item" href={item.href} target="_blank">{item.type}</a>
