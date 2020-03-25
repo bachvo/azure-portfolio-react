@@ -19,7 +19,7 @@ export default class Home extends React.Component {
           <div className="container d-flex flex-column">
             <div className="d-flex row row-cols-1 row-cols-md-3">
               <div className="card h-100 col-md-3 p-0">
-                <img className="card-img-top" alt="" src="images/bach_small.jpg" width="200" />
+                <img className="card-img-top" alt="" src={this.props.model.profile.imgSrc} width="200" />
                 <div className="card-body">
                   <h5 className="card-title">{this.props.model.profile.fullName}</h5>
                   <p className="card-text">{this.props.model.profile.occupation}</p>

@@ -1,14 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
-
 import Home from "./components/home";
 import CardDetail from "./components/card-detail";
 import Footer from "./components/footer";
-
 import { ANCHOR } from './utils/constants';
 import { hashLinkUrl } from './utils/hash-link-url';
-
 import { model } from "./models/main";
 import "./styles/app.scss";
 
@@ -73,7 +70,7 @@ export default class App extends React.Component {
             </div>
           </div>
         </nav>
-        <main class="overflow-x-hidden">
+        <main className="overflow-x-hidden">
           <Switch>
             <Route 
               exact
