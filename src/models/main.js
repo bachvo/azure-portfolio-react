@@ -244,6 +244,10 @@ export const model = {
         imgSrc: '/gallery/manifesto/manifesto-mockup-1.jpg',
         gallery: [
           {
+            src: '/gallery/manifesto/manifesto-mockup-2.jpg',
+            caption: 'Manifesto app on multiple devices',
+          },
+          {
             src: '/gallery/manifesto/manifesto-mockup-3.jpg',
             caption: 'Manifesto app on phone in portrait',
           },
