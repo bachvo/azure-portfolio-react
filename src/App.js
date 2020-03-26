@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ScrollToTop from "./components/scroll-to-top";
 import Nav from "./components/nav";
 import Home from "./components/home";
 import CardDetail from "./components/card-detail";
@@ -12,6 +13,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
+        <ScrollToTop />
         <Nav collection={model.contactInfo} />
         <main className="overflow-x-hidden">
           <Switch>
