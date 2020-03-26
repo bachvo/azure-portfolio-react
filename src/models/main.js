@@ -57,7 +57,10 @@ export const model = {
         role: 'At CopperTree Analytics, I was a web designer who specialized in user interface design and developement. Because of my diverse set of design and programming skills, I am tasked with various roles to create low to high fidelity mock-ups and later implementing my designs using modern web technologies. When creating low and high fidelity mock-ups, I use tools such as Balsamiq, Illustrator, and Photoshop to create the interface of a system, focusing on a user-centered design. With these tools, I can iterate through mock-ups at a rapid pace in order to identify any issues that might occur later in the development cycle. I also test the low and high fidelity mock-ups by conducting user testing to examine the usability of the feature. In the development phase, I use Node.js as the application foundation and AngularJS to build controllers and API\’s to serve data to the client side, from databases such as MongoDB and PostgreSQL. Once the data is retrieved from the server I can build all necessary components that help complete the user interface with the correct data being served to the view.',
         imgSrc: '/images/workexp_coppertree.png',
         imageDescription: 'CopperTree',
-        gallery: [],
+        gallery: [
+          '/gallery/coppertree/cta1.jpg',
+          '/gallery/coppertree/cta2.jpg',
+        ],
         skills: [
           'JavaScript',
           'HTML',
@@ -80,7 +83,10 @@ export const model = {
         role: 'At BlackBerry, I was hired on the team as a graphic designer who specialized in print and web design for our team and marketing department. I was tasked with various roles to create print and web material such as posters, flyers, brochures, websites, and HTML emails. When creating print material, I worked closely with my brand manager to design high quality and beautiful print material that was used in BlackBerry\’s marketing campaign. I used tools such as Illustrator, Photoshop, and InDesign for the majority of my designs. I also used JavaScript and HTML + CSS to build internal websites for corporate teams and built HTML emails that were used for internal and external marketing campaigns.',
         imgSrc: '/images/workexp_blackberry.png',
         imageDescription: 'BlackBerry',
-        gallery: [],
+        gallery: [
+          '/gallery/blackberry/bb1.jpg',
+          '/gallery/blackberry/bb2.jpg',
+        ],
         skills: [
           'JavaScript',
           'HTML',
@@ -101,7 +107,7 @@ export const model = {
         imgSrc: '/images/workexp_dsbia.png',
         imageDescription: 'Downtown Surrey Business Improvement Association',
         gallery: [
-          '/gallery/dsbia/DSBIA_UI_Display_Mockup3_midRes.jpg',
+          '/gallery/dsbia/dtbia1.jpg',
         ],
         skills: [
           'JavaScript',
@@ -135,12 +141,17 @@ export const model = {
           'PHP',
           '3D Printing',
         ],
-        imgSrc: '/gallery/ventus/Ventus_1.jpg',
+        imgSrc: '/gallery/ventus/v1.jpg',
         gallery: [
-          '/gallery/ventus/Ventus_1.jpg',
-          '/gallery/ventus/Ventus_2.jpg',
-          '/gallery/ventus/Ventus_9.jpg',
-          '/gallery/ventus/Ventus_4.jpg',
+          '/gallery/ventus/v1.jpg',
+          '/gallery/ventus/v2.jpg',
+          '/gallery/ventus/v3.jpg',
+          '/gallery/ventus/v4.jpg',
+          '/gallery/ventus/v5.jpg',
+          '/gallery/ventus/v6.jpg',
+          '/gallery/ventus/v7.jpg',
+          '/gallery/ventus/v8.jpg',
+          '/gallery/ventus/v9.jpg',
         ],
         imageDescription: 'Ventus',
         mainMedia: '/video/ventus/ventus.mp4'
@@ -155,12 +166,14 @@ export const model = {
         skills: [
           'Arduino',
         ],
-        imgSrc: '/gallery/musiq/ms3.png',
+        imgSrc: '/gallery/musiq/ms6.jpg',
         gallery: [
           '/gallery/musiq/ms1.png',
-          '/gallery/musiq/ms3.png',
           '/gallery/musiq/ms2.png',
+          '/gallery/musiq/ms3.png',
+          '/gallery/musiq/ms4.png',
           '/gallery/musiq/ms5.png',
+          '/gallery/musiq/ms6.jpg',
         ],
         imageDescription: 'Musiq Sleeve',
         mainMedia: '/video/musiq/musiq.mp4'
@@ -176,15 +189,16 @@ export const model = {
           'Android',
           'Java',
         ],
-        imgSrc: '/gallery/manifesto/Manifest_iphone_ipad_mockup1_midRes.jpg',
+        imgSrc: '/gallery/manifesto/manifesto-mockup-1.jpg',
         gallery: [
           '/gallery/manifesto/manifesto-mockup-2.jpg',
           '/gallery/manifesto/manifesto-mockup-3.jpg',
           '/gallery/manifesto/manifesto-mockup-4.jpg',
+          '/gallery/manifesto/manifesto-mockup-1.jpg',
           '/gallery/manifesto/manifesto-mockup-5.jpg',
         ],
         imageDescription: 'Manifesto',
-        mainMedia: '/gallery/manifesto/manifesto-mockup-2.jpg',
+        mainMedia: '/gallery/manifesto/manifesto-mockup-1.jpg',
      },
      { 
         id: 4,

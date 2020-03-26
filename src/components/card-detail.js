@@ -4,6 +4,7 @@ import { ANCHOR } from '../utils/constants';
 import { capitalize } from '../utils/capitalize';
 import { hashLinkUrl } from '../utils/hash-link-url';
 import { isMediaVideo } from '../utils/is-media-video';
+import Gallery from './gallery';
 
 export default class CardDetail extends React.Component {
   render() {
@@ -11,6 +12,7 @@ export default class CardDetail extends React.Component {
     const cardObject = this.props.collection.find(item => item.id === urlParamId);
     const linkToUrl = hashLinkUrl(this.props.type);
     const homeAnchor = hashLinkUrl(ANCHOR.HOME);
+    const hasGallery = cardObject.gallery.length > 0;
 
     return (
       <div>
@@ -38,6 +40,9 @@ export default class CardDetail extends React.Component {
                   <p className="card-text">{cardObject.position}</p>
                 </div>
               </div>
+              {hasGallery && (
+                <Gallery images={cardObject.gallery}/>
+              )}
             </div>
             <div className="col col-md-8 pt-4 pt-md-0">
               <h2>{cardObject.title}</h2>
