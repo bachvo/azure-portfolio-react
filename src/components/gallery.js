@@ -18,10 +18,10 @@ export default class Gallery extends React.Component {
       <div>
         <hr/>
         <div className="row row-cols-3 px-3">
-          {images.map((imgSrc, index) => {
+          {images.map((img, index) => {
             return (
               <div key={index} className="col p-0">
-                <img src={imgSrc} alt="" className="gallery__img img-thumbnail" onClick={() => this.setState({ isOpen: true, photoIndex: index })}/>
+                <img src={img.src} alt="" className="gallery__img img-thumbnail" onClick={() => this.setState({ isOpen: true, photoIndex: index })}/>
               </div>
             );
           })}
@@ -29,10 +29,11 @@ export default class Gallery extends React.Component {
  
         {isOpen && (
           <Lightbox
-            mainSrc={images[photoIndex]}
-            nextSrc={images[(photoIndex + 1) % images.length]}
-            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            mainSrc={images[photoIndex].src}
+            nextSrc={images[(photoIndex + 1) % images.length].src}
+            prevSrc={images[(photoIndex + images.length - 1) % images.length].src}
             onCloseRequest={() => this.setState({ isOpen: false })}
+            imageCaption={images[photoIndex].caption}
             onMovePrevRequest={() =>
               this.setState({
                 photoIndex: (photoIndex + images.length - 1) % images.length,

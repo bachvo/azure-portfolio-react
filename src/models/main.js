@@ -58,8 +58,14 @@ export const model = {
         imgSrc: '/images/workexp_coppertree.png',
         imageDescription: 'CopperTree',
         gallery: [
-          '/gallery/coppertree/cta1.jpg',
-          '/gallery/coppertree/cta2.jpg',
+          {
+            src: '/gallery/coppertree/cta1.jpg',
+            caption: 'I designed and developed the enteprise sass application',
+          },
+          {
+            src: '/gallery/coppertree/cta2.jpg',
+            caption: 'I curated print material for our marketing department',
+          }
         ],
         skills: [
           'JavaScript',
@@ -84,8 +90,14 @@ export const model = {
         imgSrc: '/images/workexp_blackberry.png',
         imageDescription: 'BlackBerry',
         gallery: [
-          '/gallery/blackberry/bb1.jpg',
-          '/gallery/blackberry/bb2.jpg',
+          {
+            src: '/gallery/blackberry/bb1.jpg',
+            caption: 'I designed the BlackBerry business cards',
+          },
+          {
+            src: '/gallery/blackberry/bb2.jpg',
+            caption: 'I designed the print material for our comms department',
+          }
         ],
         skills: [
           'JavaScript',
@@ -107,7 +119,10 @@ export const model = {
         imgSrc: '/images/workexp_dsbia.png',
         imageDescription: 'Downtown Surrey Business Improvement Association',
         gallery: [
-          '/gallery/dsbia/dtbia1.jpg',
+          {
+            src: '/gallery/dsbia/dtbia1.jpg',
+            caption: 'I designed and developed the corporate website',
+          },
         ],
         skills: [
           'JavaScript',
@@ -136,6 +151,8 @@ export const model = {
         role: 'I was the lead engineer for the team. I was responsible for the Arduino and SolidWorks portion of the project',
         skills: [
           'Arduino',
+          'Circuit boards',
+          'C++',
           'SolidWorks',
           'CNC Machine',
           'PHP',
@@ -143,15 +160,34 @@ export const model = {
         ],
         imgSrc: '/gallery/ventus/v1.jpg',
         gallery: [
-          '/gallery/ventus/v1.jpg',
-          '/gallery/ventus/v2.jpg',
-          '/gallery/ventus/v3.jpg',
-          '/gallery/ventus/v4.jpg',
-          '/gallery/ventus/v5.jpg',
-          '/gallery/ventus/v6.jpg',
-          '/gallery/ventus/v7.jpg',
-          '/gallery/ventus/v8.jpg',
-          '/gallery/ventus/v9.jpg',
+          {
+            src: '/gallery/ventus/v1.jpg',
+            caption: 'Bottom view',
+          },
+          {
+            src: '/gallery/ventus/v2.jpg',
+            caption: 'Arduino',
+          },
+          {
+            src: '/gallery/ventus/v4.jpg',
+            caption: 'Arduino',
+          },
+          {
+            src: '/gallery/ventus/v6.jpg',
+            caption: 'Arduino and lazer cut acrylic',
+          },
+          {
+            src: '/gallery/ventus/v7.jpg',
+            caption: 'Gears that are lazer cut from MDF wood',
+          },
+          {
+            src: '/gallery/ventus/v8.jpg',
+            caption: 'Gears that are lazer cut from MDF wood',
+          },
+          {
+            src: '/gallery/ventus/v9.jpg',
+            caption: 'Fan arms that are 3D printed',
+          }
         ],
         imageDescription: 'Ventus',
         mainMedia: '/video/ventus/ventus.mp4'
@@ -162,18 +198,34 @@ export const model = {
         website: 'https://www.vimeo.com/64613691',
         description: 'The concept of this project is to create a "mobile DJ" that simulates the use of a DJ Mix Table using a series of physical actions performed by the DJ and a pair of gloves. Being wirelessly connected his wearable hands-on device, this provides the DJ with the ability and freedom to walk around and control the sound, urgency and volume of his tracks through simple hand gestures. The inclusion of the Mobile DJ, will not only give DJ\'s the freedom of not having to be around his mix table for the entire night, but also allow the user to have deeper interactions with the crowd and his audience through dance and movement.',
         position: 'Programmer',
-        role: 'I was the lead Ardiuno developer for our team.',
+        role: 'I was the lead Arduino developer for our team.',
         skills: [
           'Arduino',
+          'Circuit boards',
+          'C++',
         ],
         imgSrc: '/gallery/musiq/ms6.jpg',
         gallery: [
-          '/gallery/musiq/ms1.png',
-          '/gallery/musiq/ms2.png',
-          '/gallery/musiq/ms3.png',
-          '/gallery/musiq/ms4.png',
-          '/gallery/musiq/ms5.png',
-          '/gallery/musiq/ms6.jpg',
+          {
+            src: '/gallery/musiq/ms1.png',
+            caption: 'Full sleeve',
+          },
+          {
+            src: '/gallery/musiq/ms2.png',
+            caption: 'User wearing the sleeve',
+          },
+          {
+            src: '/gallery/musiq/ms3.png',
+            caption: 'Glove',
+          },
+          {
+            src: '/gallery/musiq/ms4.png',
+            caption: 'Accelerometer and force sensor',
+          },
+          {
+            src: '/gallery/musiq/ms5.png',
+            caption: 'All of the equipment',
+          },
         ],
         imageDescription: 'Musiq Sleeve',
         mainMedia: '/video/musiq/musiq.mp4'
@@ -191,11 +243,22 @@ export const model = {
         ],
         imgSrc: '/gallery/manifesto/manifesto-mockup-1.jpg',
         gallery: [
-          '/gallery/manifesto/manifesto-mockup-2.jpg',
-          '/gallery/manifesto/manifesto-mockup-3.jpg',
-          '/gallery/manifesto/manifesto-mockup-4.jpg',
-          '/gallery/manifesto/manifesto-mockup-1.jpg',
-          '/gallery/manifesto/manifesto-mockup-5.jpg',
+          {
+            src: '/gallery/manifesto/manifesto-mockup-3.jpg',
+            caption: 'Manifesto app on phone in portrait',
+          },
+          {
+            src: '/gallery/manifesto/manifesto-mockup-4.jpg',
+            caption: 'Manifesto app on phone in landscape',
+          },
+          {
+            src: '/gallery/manifesto/manifesto-mockup-1.jpg',
+            caption: 'Manifesto app on multiple devices',
+          },
+          {
+            src: '/gallery/manifesto/manifesto-mockup-5.jpg',
+            caption: 'Manifesto app on tablet',
+          },
         ],
         imageDescription: 'Manifesto',
         mainMedia: '/gallery/manifesto/manifesto-mockup-1.jpg',
@@ -215,10 +278,22 @@ export const model = {
         ],
         imgSrc: '/gallery/quicam/quicam-1.jpg',
         gallery: [
-          '/gallery/quicam/quicam-2.jpg',
-          '/gallery/quicam/quicam-3.jpg',
-          '/gallery/quicam/quicam-4.jpg',
-          '/gallery/quicam/quicam-1.jpg',
+          {
+            src: '/gallery/quicam/quicam-2.jpg',
+            caption: 'Key features',
+          },
+          {
+            src: '/gallery/quicam/quicam-3.jpg',
+            caption: 'Redesign',
+          },
+          {
+            src: '/gallery/quicam/quicam-4.jpg',
+            caption: 'User Interface',
+          },
+          {
+            src: '/gallery/quicam/quicam-1.jpg',
+            caption: 'User Research',
+          },
         ],
         imageDescription: 'QuiCam',
         mainMedia: '/video/quicam/quicam.mp4'
