@@ -9,7 +9,7 @@ export default class Footer extends React.Component {
       <footer>
         <section className="d-flex flex-column align-items-center p-5">
           <div className="d-flex justify-content-around w-100">
-            {this.props.model.contactInfo.map((item) => {
+            {this.props.collection.map((item) => {
               return (
                 <div key={item.type}>
                   <a href={item.href} target="_blank" className="d-flex flex-column align-items-center">
@@ -21,7 +21,7 @@ export default class Footer extends React.Component {
             })}
           </div>
         </section>
-        <p className="footer__copyright">©{currentYear} {this.props.model.profile.fullName}</p>
+        <p className="footer__copyright">©{currentYear} {this.props.fullName}</p>
     </footer>
     );
   }
