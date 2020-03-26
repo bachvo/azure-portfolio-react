@@ -1,6 +1,5 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
  
 export default class Gallery extends React.Component {
   constructor(props) {
