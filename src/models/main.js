@@ -220,27 +220,27 @@ export const model = {
         gallery: [
           {
             src: '/gallery/musiq/ms1.png',
-            thumbnailSrc: '/gallery/musiq/thumbnail/ms1.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms1.jpg',
             caption: 'Full sleeve',
           },
           {
             src: '/gallery/musiq/ms2.png',
-            thumbnailSrc: '/gallery/musiq/thumbnail/ms2.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms2.jpg',
             caption: 'User wearing the sleeve',
           },
           {
             src: '/gallery/musiq/ms3.png',
-            thumbnailSrc: '/gallery/musiq/thumbnail/ms3.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms3.jpg',
             caption: 'Glove',
           },
           {
             src: '/gallery/musiq/ms4.png',
-            thumbnailSrc: '/gallery/musiq/thumbnail/ms4.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms4.jpg',
             caption: 'Accelerometer and force sensor',
           },
           {
             src: '/gallery/musiq/ms5.png',
-            thumbnailSrc: '/gallery/musiq/thumbnail/ms5.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms5.jpg',
             caption: 'All of the equipment',
           },
         ],
