@@ -120,7 +120,7 @@ export const model = {
         description: 'The Downtown Surrey Business Improvement Association was formed in 2003 to facilitate; business improvement, community economic development, business revitalization and enhancement to the North Surrey area. Their goal is to assist businesses and commercial property owners in Metro Surrey to build a vibrant, safe and liveable downtown.',
         position: 'Marketing Intern',
         role: 'At the Downtown Surrey BIA, I was a marketing intern who designed marketing material for the organization. The marketing material included flyers, brochures, business cards, posters, and promotional videos. I was also in charge with the organizations website, keeping the content up to date and later re-designing the entire website. When creating the marketing material, I used Illustrator, InDesign, and Photoshop for the majority of my designs. I was asked to also re-design the organizations website using wordpress and creating a custom template using PHP, HTML + CSS, and JavaScript. Furthermore I used Final Cut Pro and After Effects to create promotional videos for the organization when they held events all around the City of Surrey.',
-        imgSrc: '/images/workexp_dsbia.png',
+        imgSrc: '/images/workexp_dsbia.jpg',
         imageDescription: 'Downtown Surrey Business Improvement Association',
         gallery: [
           {
@@ -139,7 +139,7 @@ export const model = {
           'Final Cut Pro',
           'After Effects',
         ],
-        mainMedia: '/images/workexp_dsbia.png',
+        mainMedia: '/images/workexp_dsbia.jpg',
       }
     ],
   },
