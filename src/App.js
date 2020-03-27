@@ -5,6 +5,7 @@ import Nav from "./components/nav";
 import Home from "./components/home";
 import CardDetail from "./components/card-detail";
 import Footer from "./components/footer";
+import PageNotFound from "./components/page-not-found";
 import { ANCHOR } from './utils/constants';
 import { model } from "./models/main";
 import "./styles/app.scss";
@@ -30,6 +31,7 @@ export default class App extends React.Component {
               path="/projects/:id" 
               render={props => (<CardDetail {...props} collection={model.projects.cards} type={ANCHOR.PROJECTS}/>)}
             />
+            <Route component={PageNotFound} />
           </Switch>
           <Footer collection={model.contactInfo} fullName={model.profile.fullName} />
         </main>

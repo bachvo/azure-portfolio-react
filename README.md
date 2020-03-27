@@ -1,3 +1,12 @@
+## Production
+http://www.bachvo.com/
+
+### Serve
+This app uses PM2 to serve the web application on Azure (Configuration > General Settings). PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks. https://pm2.keymetrics.io/
+
+### Log stream 
+https://azure-portfolio-react.scm.azurewebsites.net/api/logstream
+
 ## Available Scripts
 
 In the project directory, you can run:
