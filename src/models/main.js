@@ -60,10 +60,12 @@ export const model = {
         gallery: [
           {
             src: '/gallery/coppertree/cta1.jpg',
+            thumbnailSrc: '/gallery/coppertree/thumbnail/cta1.jpg',
             caption: 'I designed and developed the enteprise sass application',
           },
           {
             src: '/gallery/coppertree/cta2.jpg',
+            thumbnailSrc: '/gallery/coppertree/thumbnail/cta2.jpg',
             caption: 'I curated print material for our marketing department',
           }
         ],
@@ -92,10 +94,12 @@ export const model = {
         gallery: [
           {
             src: '/gallery/blackberry/bb1.jpg',
+            thumbnailSrc: '/gallery/blackberry/thumbnail/bb1.jpg',
             caption: 'I designed the BlackBerry business cards',
           },
           {
             src: '/gallery/blackberry/bb2.jpg',
+            thumbnailSrc: '/gallery/blackberry/thumbnail/bb2.jpg',
             caption: 'I designed the print material for our comms department',
           }
         ],
@@ -121,6 +125,7 @@ export const model = {
         gallery: [
           {
             src: '/gallery/dsbia/dtbia1.jpg',
+            thumbnailSrc: '/gallery/dsbia/thumbnail/dtbia1.jpg',
             caption: 'I designed and developed the corporate website',
           },
         ],
@@ -162,30 +167,37 @@ export const model = {
         gallery: [
           {
             src: '/gallery/ventus/v1.jpg',
+            thumbnailSrc: '/gallery/ventus/thumbnail/v1.jpg',
             caption: 'Bottom view',
           },
           {
             src: '/gallery/ventus/v2.jpg',
+            thumbnailSrc: '/gallery/ventus/thumbnail/v2.jpg',
             caption: 'Arduino',
           },
           {
             src: '/gallery/ventus/v4.jpg',
+            thumbnailSrc: '/gallery/ventus/thumbnail/v4.jpg',
             caption: 'Arduino',
           },
           {
             src: '/gallery/ventus/v6.jpg',
+            thumbnailSrc: '/gallery/ventus/thumbnail/v6.jpg',
             caption: 'Arduino and lazer cut acrylic',
           },
           {
             src: '/gallery/ventus/v7.jpg',
+            thumbnailSrc: '/gallery/ventus/thumbnail/v7.jpg',
             caption: 'Gears that are lazer cut from MDF wood',
           },
           {
             src: '/gallery/ventus/v8.jpg',
+            thumbnailSrc: '/gallery/ventus/thumbnail/v8.jpg',
             caption: 'Gears that are lazer cut from MDF wood',
           },
           {
             src: '/gallery/ventus/v9.jpg',
+            thumbnailSrc: '/gallery/ventus/thumbnail/v9.jpg',
             caption: 'Fan arms that are 3D printed',
           }
         ],
@@ -208,22 +220,27 @@ export const model = {
         gallery: [
           {
             src: '/gallery/musiq/ms1.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms1.png',
             caption: 'Full sleeve',
           },
           {
             src: '/gallery/musiq/ms2.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms2.png',
             caption: 'User wearing the sleeve',
           },
           {
             src: '/gallery/musiq/ms3.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms3.png',
             caption: 'Glove',
           },
           {
             src: '/gallery/musiq/ms4.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms4.png',
             caption: 'Accelerometer and force sensor',
           },
           {
             src: '/gallery/musiq/ms5.png',
+            thumbnailSrc: '/gallery/musiq/thumbnail/ms5.png',
             caption: 'All of the equipment',
           },
         ],
@@ -245,22 +262,27 @@ export const model = {
         gallery: [
           {
             src: '/gallery/manifesto/manifesto-mockup-2.jpg',
+            thumbnailSrc: '/gallery/manifesto/thumbnail/manifesto-mockup-2.jpg',
             caption: 'Manifesto app on multiple devices',
           },
           {
             src: '/gallery/manifesto/manifesto-mockup-3.jpg',
+            thumbnailSrc: '/gallery/manifesto/thumbnail/manifesto-mockup-3.jpg',
             caption: 'Manifesto app on phone in portrait',
           },
           {
             src: '/gallery/manifesto/manifesto-mockup-4.jpg',
+            thumbnailSrc: '/gallery/manifesto/thumbnail/manifesto-mockup-4.jpg',
             caption: 'Manifesto app on phone in landscape',
           },
           {
             src: '/gallery/manifesto/manifesto-mockup-1.jpg',
+            thumbnailSrc: '/gallery/manifesto/thumbnail/manifesto-mockup-1.jpg',
             caption: 'Manifesto app on multiple devices',
           },
           {
             src: '/gallery/manifesto/manifesto-mockup-5.jpg',
+            thumbnailSrc: '/gallery/manifesto/thumbnail/manifesto-mockup-5.jpg',
             caption: 'Manifesto app on tablet',
           },
         ],
@@ -284,18 +306,22 @@ export const model = {
         gallery: [
           {
             src: '/gallery/quicam/quicam-2.jpg',
+            thumbnailSrc: '/gallery/quicam/thumbnail/quicam-2.jpg',
             caption: 'Key features',
           },
           {
             src: '/gallery/quicam/quicam-3.jpg',
+            thumbnailSrc: '/gallery/quicam/thumbnail/quicam-3.jpg',
             caption: 'Redesign',
           },
           {
             src: '/gallery/quicam/quicam-4.jpg',
+            thumbnailSrc: '/gallery/quicam/thumbnail/quicam-4.jpg',
             caption: 'User Interface',
           },
           {
             src: '/gallery/quicam/quicam-1.jpg',
+            thumbnailSrc: '/gallery/quicam/thumbnail/quicam-1.jpg',
             caption: 'User Research',
           },
         ],

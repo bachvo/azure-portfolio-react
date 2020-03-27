@@ -21,7 +21,7 @@ export default class Gallery extends React.Component {
           {images.map((img, index) => {
             return (
               <div key={index} className="col p-0">
-                <img src={img.src} alt="" className="gallery__img img-thumbnail" onClick={() => this.setState({ isOpen: true, photoIndex: index })}/>
+                <img src={img.thumbnailSrc} alt="" className="gallery__img img-thumbnail" onClick={() => this.setState({ isOpen: true, photoIndex: index })}/>
               </div>
             );
           })}
