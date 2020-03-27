@@ -11,7 +11,7 @@ export default class Nav extends React.Component {
     const workexpAnchor = hashLinkUrl(ANCHOR.WORKEXP);
 
     return (
-      <nav className="navbar sticky-top navbar-expand-md navbar-light bg-light">
+      <nav className="navbar sticky-top navbar-expand-md navbar-light bg-light nav--z-1">
         <Link className="navbar-brand" to={homeAnchor}>
           <img alt="" className="nav__logo-top-image" src="/images/logo-top.png"/>
         </Link>

@@ -8,7 +8,6 @@ import Footer from "./components/footer";
 import PageNotFound from "./components/page-not-found";
 import { ANCHOR } from './utils/constants';
 import { model } from "./models/main";
-import "./styles/app.scss";
 
 export default class App extends React.Component {
   render() {

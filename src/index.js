@@ -5,6 +5,8 @@ import * as serviceWorker from './serviceWorker';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'react-image-lightbox/style.css';
+import "./styles/app.scss";
+
 import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 

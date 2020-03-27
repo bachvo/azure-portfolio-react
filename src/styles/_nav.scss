@@ -1,5 +1,9 @@
 $nav-logo-top-image-size: 40px;
 
+.nav--z-1 {
+  z-index: 1;
+}
+
 .nav__logo-top-image {
   border-radius: 4px;
   height: $nav-logo-top-image-size;
