@@ -30,7 +30,7 @@ export default class CardDetail extends React.Component {
             <div className="col col-md-4">
               <div className="card">
                 {isMediaVideo(cardObject.mainMedia) 
-                  ? <video src={cardObject.mainMedia} className="card-img-top" controls={true} playsinline/>
+                  ? <video src={cardObject.mainMedia} className="card-img-top" controls={true} playsinline={true}/>
                   : <img src={cardObject.mainMedia} className="card-img-top" alt=""/>
                 }
                 <div className="card-body">
