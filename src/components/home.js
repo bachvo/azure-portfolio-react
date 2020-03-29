@@ -1,5 +1,5 @@
-import React from "react";
-import CardCollection from "./card-collection";
+import React from 'react';
+import CardCollection from './card-collection';
 import { createMarkup } from '../utils/create-markup';
 import { ANCHOR } from '../utils/constants';
 

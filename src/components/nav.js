@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { ANCHOR } from '../utils/constants';
 import { hashLinkUrl } from '../utils/hash-link-url';
