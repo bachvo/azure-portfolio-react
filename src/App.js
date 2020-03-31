@@ -6,7 +6,7 @@ import Home from './components/home';
 import CardDetail from './components/card-detail';
 import Footer from './components/footer';
 import PageNotFound from './components/page-not-found';
-import { ANCHOR, API_HOST } from './utils/constants';
+import { ANCHOR } from './utils/constants';
 import { model } from './data/model';
 
 export default class App extends React.Component {
