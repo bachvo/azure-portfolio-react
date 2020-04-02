@@ -12,7 +12,7 @@ export default class CardCollection extends React.Component {
           <p className="max-width-700-px text-md-left text-lg-center pb-4">{this.props.model.description}</p>
           <div className="row row-cols-1 row-cols-md-4">
             {this.props.model.cards.map((item, key) => {
-              const url = `/${this.props.id}/${item.id}`
+              const url = `/${this.props.id}/${item.cardId}`
               return (
                 <Link key={key} to={url}>
                   <div className="col mb-4">

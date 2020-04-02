@@ -9,7 +9,7 @@ import Gallery from './gallery';
 export default class CardDetail extends React.Component {
   render() {
     const urlParamId = parseInt(this.props.match.params.id);
-    const cardObject = this.props.collection.find(item => item.id === urlParamId);
+    const cardObject = this.props.collection.find(item => item.cardId === urlParamId);
     const linkToUrl = hashLinkUrl(this.props.type);
     const homeAnchor = hashLinkUrl(ANCHOR.HOME);
     const hasGallery = cardObject.gallery.length > 0;

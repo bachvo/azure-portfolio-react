@@ -9,8 +9,8 @@ export default class Home extends React.Component {
       <div>
         <a className="nav__anchor" id={ANCHOR.HOME}></a>
         <section className="home__intro d-flex flex-column align-items-md-start align-items-lg-center px-2 py-4 p-md-5">
-          <h2>{this.props.model.introTitle}</h2>
-          <p className="max-width-700-px text-md-left text-lg-center pb-4" dangerouslySetInnerHTML={createMarkup(this.props.model.introDescription)}></p>
+          <h2>{this.props.model.intro.title}</h2>
+          <p className="max-width-700-px text-md-left text-lg-center pb-4" dangerouslySetInnerHTML={createMarkup(this.props.model.intro.description)}></p>
           <img alt="" className="home__landing-page-image" src="images/landing_page.png"/>
         </section>
 
@@ -35,7 +35,7 @@ export default class Home extends React.Component {
 
         <section className="d-flex flex-column align-items-md-start align-items-lg-center px-2 py-4 p-md-5">
           <div className="d-flex row row-cols-1 row-cols-md-3">
-            {this.props.model.profile.skills.map((item, key) => {
+            {this.props.model.skills.map((item, key) => {
               return (
                 <div key={key} className="d-flex flex-column align-items-md-start align-items-lg-center col">
                   <img src={item.imgSrc} height="200" width="200" alt=""/>

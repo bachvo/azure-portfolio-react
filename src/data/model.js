@@ -1,30 +1,33 @@
 export const model = {
-  introTitle: 'Web Developer and Designer', 
-  introDescription: 'Hello, I am a web developer and designer currently living in the San Fransisco Bay Area. I have a keen interest in user interface and user experience design as well as programming and web development. This site is built on <a href="https://reactjs.org/" target="_blank" class="no-highlight"><strong>React.js</strong></a> + <a href="http://getbootstrap.com/" target="_blank" class="no-highlight"><strong>Bootstrap</strong></a> and is hosted in the cloud on <a href="https://azure.microsoft.com/en-us/overview/" target="_blank" class="no-highlight"><strong>Azure</strong></a>. All of the graphics you see on this site were created and designed by me. Scroll down to see more.', 
+  intro: {
+    title: 'Web Developer and Designer',
+    description: 'Hello, I am a web developer and designer currently living in the San Fransisco Bay Area. I have a keen interest in user interface and user experience design as well as programming and web development. This site is built on <a href="https://reactjs.org/" target="_blank" class="no-highlight"><strong>React.js</strong></a> + <a href="http://getbootstrap.com/" target="_blank" class="no-highlight"><strong>Bootstrap</strong></a> and is hosted in the cloud on <a href="https://azure.microsoft.com/en-us/overview/" target="_blank" class="no-highlight"><strong>Azure</strong></a>. All of the graphics you see on this site were created and designed by me. Scroll down to see more.', 
+  },
 
   profile: {
     fullName: 'Bach Vo',
     occupation: 'Software Engineer',
     imgSrc: '/images/bach_small.jpg',
     description: 'I graduated from <a href="http://www.sfu.ca" class="no-highlight" target="_blank"><strong>Simon Fraser University</strong></a> where I received a Bachelors of Science with Co-operative Education at the <a href="http://www.sfu.ca/siat.html" class="no-highlight" target="_blank"><strong>School of Interactive Arts and Technology</strong></a> with a concentration in Informatics. I am passionate about the art of design and the science of programming, where I balance this unique skillset to become a more creative designer and more intelligent programmer.<br><br> I am a creative individual who loves to design aesthetic user interfaces and always thinking about how we can better improve the user experience and design of an application. This helps me think outside the box and come up with creative solutions to complex problems that nobody else has thought of. Along side my creative skills are my technical programming skills that allow me to build my ideas into reality, giving me the tools to design, engineer, and develop.',
-    skills: [
-      {
-        title: 'User Interface Designer',
-        imgSrc: '/images/UI.png',
-        description: 'Being a user interface designer means that my creativity will directly impact the way users interact with my application and how information is presented to the user. I must consider the workflow of a user and keep the user interface clean and usable following the principle of form follows function. I use wireframe techniques such as sketching and balsamiq to create low fidelity prototypes and later use Adobe Illustrator, InDesign, and Photoshop to create high fidelity user interface mock-ups.',
-      },
-      {
-        title: 'User Experience Designer',
-        imgSrc: '/images/UX.png',
-        description: 'As a user experience designer, I study how to improve the usability and ease of use of an application by implementing design methods and heuristics. I use methodologies such as Think-Aloud, Co-discovery, and Wizard of Oz to observe any anomalies that occur in the application. During the post analysis, I use methods such as the System Usability Scale to measure the user effectiveness and satisfaction as well as an Affinity Diagram to look for patterns of in-efficiency that occur in the application.',
-      },
-      {
-        title: 'Web Developer',
-        imgSrc: '/images/Dev.png',
-        description: 'After the design phase comes the implementation phase, which excites me the most. Here is where my creativity and ideas come to life, using modern web technologies such as AngularJS, Ember.js, and JavaScript to engineer the web framework and using HTML, CSS and Bootstrap to design the aesthetic user interface of my application. It is also imperative to use modules such as Node.js, Bower, JQuery, Sass, and Gulp.js to help improve the code quality of the application as well as the efficiency in developing it.',
-      }
-    ],
   },
+
+  skills: [
+    {
+      title: 'User Interface Designer',
+      imgSrc: '/images/UI.png',
+      description: 'Being a user interface designer means that my creativity will directly impact the way users interact with my application and how information is presented to the user. I must consider the workflow of a user and keep the user interface clean and usable following the principle of form follows function. I use wireframe techniques such as sketching and balsamiq to create low fidelity prototypes and later use Adobe Illustrator, InDesign, and Photoshop to create high fidelity user interface mock-ups.',
+    },
+    {
+      title: 'User Experience Designer',
+      imgSrc: '/images/UX.png',
+      description: 'As a user experience designer, I study how to improve the usability and ease of use of an application by implementing design methods and heuristics. I use methodologies such as Think-Aloud, Co-discovery, and Wizard of Oz to observe any anomalies that occur in the application. During the post analysis, I use methods such as the System Usability Scale to measure the user effectiveness and satisfaction as well as an Affinity Diagram to look for patterns of in-efficiency that occur in the application.',
+    },
+    {
+      title: 'Web Developer',
+      imgSrc: '/images/Dev.png',
+      description: 'After the design phase comes the implementation phase, which excites me the most. Here is where my creativity and ideas come to life, using modern web technologies such as AngularJS, Ember.js, and JavaScript to engineer the web framework and using HTML, CSS and Bootstrap to design the aesthetic user interface of my application. It is also imperative to use modules such as Node.js, Bower, JQuery, Sass, and Gulp.js to help improve the code quality of the application as well as the efficiency in developing it.',
+    }
+  ],
 
   workExp: {
     title: 'Work Experience',
@@ -293,7 +296,7 @@ export const model = {
         id: 4,
         title: 'QuiCam',
         downloadTitle: 'Download Report',
-        downloadLink: './assets/resources/quicam/evaluation.pdf',
+        downloadLink: '/resources/quicam/evaluation.pdf',
         description: 'QuiCam is an app built for Google Glass that gives users the ability to find the users points of interest and photo edit images in real-time, as the user is taking the photo. This real-time action allows users to see photos being mixed and edited before even taking the picture, giving the user live feedback to the brightness, contrast, hue, saturation, and positioning.',
         position: 'User Interface Designer',
         role: 'I was the user interface designer and the user researcher for this project.',
