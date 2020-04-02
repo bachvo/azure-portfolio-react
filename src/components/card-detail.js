@@ -30,7 +30,7 @@ export default class CardDetail extends React.Component {
             <div className="col col-md-4">
               <div className="card">
                 {isMediaVideo(cardObject.mainMedia) 
-                  ? <video src={cardObject.mainMedia} className="card-img-top" controls={true} playsinline={true}/>
+                  ? <video src={cardObject.mainMedia} className="card-img-top" controls={true} playsInline={true}/>
                   : <img src={cardObject.mainMedia} className="card-img-top" alt=""/>
                 }
                 <div className="card-body">
@@ -53,14 +53,7 @@ export default class CardDetail extends React.Component {
               <h5 className="card-detail__sub-heading">Role</h5>
               <p>{cardObject.role}</p>
               <h5 className="card-detail__sub-heading">Skills</h5>
-              <p>
-                {cardObject.skills.map((skill, index) => {
-                  if (index === cardObject.skills.length - 1) {
-                    return skill;
-                  } 
-                  return `${skill}, `;
-                })}
-              </p>
+              <p>{cardObject.skills}</p>
             </div>
             </div>
           </div>

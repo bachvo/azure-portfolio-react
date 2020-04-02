@@ -34,7 +34,7 @@ export const model = {
     description: 'My work experience includes several different types of organizations ranging from non-profit organizations to large global corporations. The variety of small and large companies in my past experience has allowed me to be very agile with my skillset, where I am able to quickly adapt to different teams and develop my soft skills.',
     cards: [
       { 
-        id: 1,
+        cardId: 1,
         title: 'LinkedIn',
         website: 'https://www.linkedin.com',
         description: 'Founded in 2003, LinkedIn connects the world\'s professionals to make them more productive and successful. With more than 675+ million members worldwide, including executives from every Fortune 500 company, LinkedIn is the world\'s largest professional network. The company has a diversified business model with revenue coming from Talent Solutions, Marketing Solutions, and Premium Subscriptions products. Headquartered in Silicon Valley, LinkedIn has offices across the globe.',
@@ -43,16 +43,11 @@ export const model = {
         imgSrc: '/images/workexp_linkedin.png',
         imageDescription: 'LinkedIn',
         gallery: [],
-        skills: [
-          'JavaScript',
-          'HTML',
-          'CSS',
-          'Ember.js',
-        ],
+        skills: 'JavaScript, HTML, CSS, Ember.js',
         mainMedia: '/images/workexp_linkedin.png',
       },
       { 
-        id: 2,
+        cardId: 2,
         title: 'CopperTree Analytics',
         website: 'https://www.coppertreeanalytics.com',
         description: 'CopperTree Analytics is a software as a service company that solves energy management issues through technology that automatically checks the integrity of a clients Building Automation System (BAS) while pinpointing system inefficiencies. It compares the data gathered from a clients system to a defined baseline and highlights any changes. The CopperTree technology is achieved through the three step process of: Acquire, Analyze, and Advise.',
@@ -72,21 +67,11 @@ export const model = {
             caption: 'I curated print material for our marketing department',
           }
         ],
-        skills: [
-          'JavaScript',
-          'HTML',
-          'CSS',
-          'Balsamiq',
-          'Illustrator',
-          'Photoshop',
-          'Node.js',
-          'Angular.js',
-          'MongoDB',
-        ],
+        skills: 'JavaScript, HTML, CSS, Balsamiq, Illustrator, Photoshop, Node.js, Angular.js, MongoDB',
         mainMedia: '/images/workexp_coppertree.png',
       },
       { 
-        id: 3,
+        cardId: 3,
         title: 'BlackBerry',
         website: 'https://www.blackberry.com',
         description: 'An award winning fortune 500 company, Blackberry is a Canadian telecommunication and wireless equipment manufacturer, based in Waterloo, Ontario. It is best known as the developer of the BlackBerry brand of smartphones and tablets but also well known worldwide as a provider of secure & high reliability software for industrial applications and Mobile Device Management (MDM).',
@@ -106,18 +91,11 @@ export const model = {
             caption: 'I designed the print material for our comms department',
           }
         ],
-        skills: [
-          'JavaScript',
-          'HTML',
-          'CSS',
-          'Illustrator',
-          'Photoshop',
-          'InDesign',
-        ],
+        skills: 'JavaScript, HTML, CSS, Illustrator, Photoshop, InDesign',
         mainMedia: '/images/workexp_blackberry.png',
       },
       { 
-        id: 4,
+        cardId: 4,
         title: 'Downtown Surrey BIA',
         website: 'http://downtownsurreybia.com/',
         description: 'The Downtown Surrey Business Improvement Association was formed in 2003 to facilitate; business improvement, community economic development, business revitalization and enhancement to the North Surrey area. Their goal is to assist businesses and commercial property owners in Metro Surrey to build a vibrant, safe and liveable downtown.',
@@ -132,16 +110,7 @@ export const model = {
             caption: 'I designed and developed the corporate website',
           },
         ],
-        skills: [
-          'JavaScript',
-          'HTML',
-          'CSS',
-          'PHP',
-          'Illustrator',
-          'Photoshop',
-          'Final Cut Pro',
-          'After Effects',
-        ],
+        skills: 'JavaScript, HTML, CSS, PHP, Illustrator, Photoshop, Final Cut Pro, After Effects',
         mainMedia: '/images/workexp_dsbia.jpg',
       }
     ],
@@ -152,20 +121,12 @@ export const model = {
     description: 'My projects include a variety of school projects that I have completed during my undergrad at Simon Fraser University. This includes my capstone project and other projects from different classes that I enjoyed working on throughout my time at University.',
     cards: [
       { 
-        id: 1,
+        cardId: 1,
         title: 'Ventus',
         description: 'Ventus is an ambient heating device drawn from inspirations of past precedents of early 1950\'s design and heating/cooling devices. Ventus is primarily made of acrylic because the material is durable, light weight and strong enough to be hung from the ceiling. The rods that extend down from the platform are made of wood and the blades that are attached to the rods are hand made from MDF wood and paper. Arduino was implemented to power the rods and fans and from there, mobile devices were explored to create interactivity with the user. A Bluetooth chip Arduino microcontroller is used to calculate the accelerometer of the users phone to activate and de-activate the fan as the user interacts with his/her phone. The rods rotate from 4 servo motors that are attached to gears to be able to spin 13 rods. Users can control which direction the fan rotates as well as the speed of the rotation by simply moving the phone in the same direction and the degree in which the phone is tilted.',
         position: 'Programmer',
         role: 'I was the lead engineer for the team. I was responsible for the Arduino and SolidWorks portion of the project',
-        skills: [
-          'Arduino',
-          'Circuit boards',
-          'C++',
-          'SolidWorks',
-          'CNC Machine',
-          'PHP',
-          '3D Printing',
-        ],
+        skills: 'Arduino, Circuit boards, C++, SolidWorks, CNC Machine, PHP, 3D Printing',
         imgSrc: '/gallery/ventus/v1.jpg',
         gallery: [
           {
@@ -208,17 +169,13 @@ export const model = {
         mainMedia: '/video/ventus/ventus.mp4'
      },
      {
-        id: 2,
+        cardId: 2,
         title: 'Musiq Sleeve',
         website: 'https://www.vimeo.com/64613691',
         description: 'The concept of this project is to create a "mobile DJ" that simulates the use of a DJ Mix Table using a series of physical actions performed by the DJ and a pair of gloves. Being wirelessly connected his wearable hands-on device, this provides the DJ with the ability and freedom to walk around and control the sound, urgency and volume of his tracks through simple hand gestures. The inclusion of the Mobile DJ, will not only give DJ\'s the freedom of not having to be around his mix table for the entire night, but also allow the user to have deeper interactions with the crowd and his audience through dance and movement.',
         position: 'Programmer',
         role: 'I was the lead Arduino developer for our team.',
-        skills: [
-          'Arduino',
-          'Circuit boards',
-          'C++',
-        ],
+        skills: 'Arduino, Circuit boards, C++',
         imgSrc: '/gallery/musiq/ms6.jpg',
         gallery: [
           {
@@ -251,16 +208,13 @@ export const model = {
         mainMedia: '/video/musiq/musiq.mp4'
      },
      {
-        id: 3,
+        cardId: 3,
         title: 'Manifesto',
         website: 'https://github.com/bachvo/Android',
         description: 'Manifesto is a smartphone application that designed for individual or social groups to plan meetings. It allows user to offset a position on the map using GPS function. User can choose a specific point on the map as his/her target location. After that user will be able to share the location to his/her contacts. Any web browser can read the position information, so that users who received the information can view the location on their own device. Not only that, location information can be saved in the app as “favorites” so that user will be able to access their favorite location easily. Furthermore, the app will have a real-time tracking system to allow users in the group to view all group members’ current location. Overall, Manifesto will enhance communication between friends and improve the event organization between social groups.',
         position: 'Programmer',
         role: 'I was the lead Android Developer for the team.',
-        skills: [
-          'Android',
-          'Java',
-        ],
+        skills: 'Android, Java',
         imgSrc: '/gallery/manifesto/manifesto-mockup-1.jpg',
         gallery: [
           {
@@ -293,18 +247,14 @@ export const model = {
         mainMedia: '/gallery/manifesto/manifesto-mockup-1.jpg',
      },
      { 
-        id: 4,
+        cardId: 4,
         title: 'QuiCam',
         downloadTitle: 'Download Report',
         downloadLink: '/resources/quicam/evaluation.pdf',
         description: 'QuiCam is an app built for Google Glass that gives users the ability to find the users points of interest and photo edit images in real-time, as the user is taking the photo. This real-time action allows users to see photos being mixed and edited before even taking the picture, giving the user live feedback to the brightness, contrast, hue, saturation, and positioning.',
         position: 'User Interface Designer',
         role: 'I was the user interface designer and the user researcher for this project.',
-        skills: [
-          'User Research',
-          'Design Evaluation',
-          'User Testing',
-        ],
+        skills: 'User Research, Design Evaluation, User Testing',
         imgSrc: '/gallery/quicam/quicam-1.jpg',
         gallery: [
           {
