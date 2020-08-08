@@ -248,38 +248,32 @@ export const model = {
      },
      { 
         cardId: 4,
-        title: 'QuiCam',
-        downloadTitle: 'Download Report',
-        downloadLink: '/resources/quicam/evaluation.pdf',
-        description: 'QuiCam is an app built for Google Glass that gives users the ability to find the users points of interest and photo edit images in real-time, as the user is taking the photo. This real-time action allows users to see photos being mixed and edited before even taking the picture, giving the user live feedback to the brightness, contrast, hue, saturation, and positioning.',
-        position: 'User Interface Designer',
-        role: 'I was the user interface designer and the user researcher for this project.',
-        skills: 'User Research, Design Evaluation, User Testing',
-        imgSrc: '/gallery/quicam/quicam-1.jpg',
+        title: 'FoodiesUnited',
+        website: 'https://www.foodiesunited.org/',
+        description: 'We believe being a foodie is simply showing compassion for food. Let\'s support the 15 million Americans in the restaurant industry facing the dark period of COVID-19 by uniting together and spreading positivity. Support a local restaurant by purchasing a gift card, ordering food, and giving words of encouragement. Let\'s do what food is supposed to do - bring us together.',
+        position: 'Software Engineer',
+        role: 'Full stack engineer',
+        skills: 'Javascript, React, GraphQL, Heroku, Express',
+        imgSrc: '/gallery/foodiesunited/marketinglogo.jpg',
         gallery: [
           {
-            src: '/gallery/quicam/quicam-2.jpg',
-            thumbnailSrc: '/gallery/quicam/thumbnail/quicam-2.jpg',
-            caption: 'Key features',
+            src: '/gallery/foodiesunited/foodieslogo.png',
+            thumbnailSrc: '/gallery/foodiesunited/thumbnail/foodieslogo.png',
+            caption: 'Foodies United logo',
           },
           {
-            src: '/gallery/quicam/quicam-3.jpg',
-            thumbnailSrc: '/gallery/quicam/thumbnail/quicam-3.jpg',
-            caption: 'Redesign',
+            src: '/gallery/foodiesunited/marketinglogo.jpg',
+            thumbnailSrc: '/gallery/foodiesunited/thumbnail/marketinglogo.png',
+            caption: 'Foodies United graphic',
           },
           {
-            src: '/gallery/quicam/quicam-4.jpg',
-            thumbnailSrc: '/gallery/quicam/thumbnail/quicam-4.jpg',
-            caption: 'User Interface',
-          },
-          {
-            src: '/gallery/quicam/quicam-1.jpg',
-            thumbnailSrc: '/gallery/quicam/thumbnail/quicam-1.jpg',
-            caption: 'User Research',
-          },
+            src: '/gallery/foodiesunited/webpage.png',
+            thumbnailSrc: '/gallery/foodiesunited/thumbnail/webpage.png',
+            caption: 'Foodies United web page',
+          }
         ],
-        imageDescription: 'QuiCam',
-        mainMedia: '/video/quicam/quicam.mp4'
+        imageDescription: 'Foodies United',
+        mainMedia: '/gallery/foodiesunited/foodieslogo48.png'
       }
     ],
   },
