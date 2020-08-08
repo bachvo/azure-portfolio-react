@@ -118,7 +118,7 @@ export const model = {
 
   projects: {
     title: 'Projects',
-    description: 'My projects include a variety of school projects that I have completed during my undergrad at Simon Fraser University. This includes my capstone project and other projects from different classes that I enjoyed working on throughout my time at University.',
+    description: 'My projects include a variety of school projects that I have completed during my undergrad at Simon Fraser University and non-profit organizations that help the community.',
     cards: [
       { 
         cardId: 1,
