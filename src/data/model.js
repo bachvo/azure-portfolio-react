@@ -257,13 +257,8 @@ export const model = {
         imgSrc: '/gallery/foodiesunited/marketinglogo.jpg',
         gallery: [
           {
-            src: '/gallery/foodiesunited/foodieslogo.png',
-            thumbnailSrc: '/gallery/foodiesunited/thumbnail/foodieslogo.png',
-            caption: 'Foodies United logo',
-          },
-          {
             src: '/gallery/foodiesunited/marketinglogo.jpg',
-            thumbnailSrc: '/gallery/foodiesunited/thumbnail/marketinglogo.png',
+            thumbnailSrc: '/gallery/foodiesunited/thumbnail/marketinglogo.jpg',
             caption: 'Foodies United graphic',
           },
           {
