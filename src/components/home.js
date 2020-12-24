@@ -18,10 +18,13 @@ export default class Home extends React.Component {
         {this.props.model.intro && (
           <div>
             <a className="nav__anchor" id={ANCHOR.HOME}></a>
-            <section className="home__intro d-flex flex-column align-items-md-start align-items-lg-center px-2 py-4 p-md-5">
+            <section className="home__intro d-flex flex-column align-items-md-start align-items-lg-center px-2 pt-4 pb-2 pt-md-5 px-md-5">
               <h2>{this.props.model.intro.title}</h2>
               <p className="max-width-700-px text-md-left text-lg-center pb-4" dangerouslySetInnerHTML={createMarkup(this.props.model.intro.description)}></p>
+            </section>
+            <section className="home__illustration d-flex flex-column align-items-md-start align-items-lg-center">
               <img alt="" className="home__landing-page-image" src="images/landing_page.png"/>
+              <div className="home__desk"></div>
             </section>
           </div>
         )}
@@ -74,7 +77,7 @@ export default class Home extends React.Component {
             model={this.props.model.workExp}
           />
         )}
-        
+
         {this.props.model.projects && (
           <CardCollection
             classNames="background-section"

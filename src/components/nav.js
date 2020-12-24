@@ -11,7 +11,7 @@ export default class Nav extends React.Component {
     const workexpAnchor = hashLinkUrl(ANCHOR.WORKEXP);
 
     return (
-      <nav className="navbar sticky-top navbar-expand-md navbar-light bg-light nav--z-1">
+      <nav className="navbar sticky-top navbar-expand-md navbar-light bg-light nav--z-2">
         <Link className="navbar-brand" to={homeAnchor}>
           <img alt="" className="nav__logo-top-image" src="/images/logo-top.png"/>
         </Link>
@@ -42,7 +42,7 @@ export default class Nav extends React.Component {
             </li>
           </ul>
           <div className="dropdown">
-            <button 
+            <button
               className="btn btn-link dropdown-toggle"
               type="button" id="contactDropdownMenu"
               data-toggle="dropdown"

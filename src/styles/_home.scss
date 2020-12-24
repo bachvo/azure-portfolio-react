@@ -3,6 +3,17 @@
   background-color: $beige;
 }
 
+.home__illustration {
+  background-color: $beige;
+}
+
+.home__desk {
+  background-color: $dark-beige;
+  width: 100%;
+  height: 200px;
+  margin-top: -150px;
+}
+
 .home__workexp {
   color: white;
   background-color: $turquoise;
@@ -10,11 +21,26 @@
 
 .home__landing-page-image {
   height: 300px;
+  z-index: 1;
 }
 
+// tablet and lower
 @media (max-width: 768px) {
   .home__landing-page-image {
     width: 100%;
     height: auto;
+  }
+
+  .home__desk {
+    height: 150px;
+    margin-top: -100px;
+  }
+}
+
+// phone and lower
+@media (max-width: 600px) {
+  .home__desk {
+    height: 100px;
+    margin-top: -75px;
   }
 }
