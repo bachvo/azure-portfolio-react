@@ -1,9 +1,15 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import CardCollection from './card-collection';
 import { createMarkup } from '../utils/create-markup';
 import { ANCHOR } from '../utils/constants';
 
 export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    ReactGA.pageview(`${window.location.pathname}`);
+  }
+
   render() {
     const loadingElement = (
       <div className="text-center my-5">

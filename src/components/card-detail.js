@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import { HashLink as Link } from 'react-router-hash-link';
 import { ANCHOR } from '../utils/constants';
 import { capitalize } from '../utils/capitalize';
@@ -7,6 +8,11 @@ import { isMediaVideo } from '../utils/is-media-video';
 import Gallery from './gallery';
 
 export default class CardDetail extends React.Component {
+  constructor(props) {
+    super(props);
+    ReactGA.pageview(`${window.location.pathname}`);
+  }
+
   render() {
     const urlParamId = parseInt(this.props.match.params.id);
     const cardObject = this.props.collection.find(item => item.cardId === urlParamId);
@@ -29,7 +35,7 @@ export default class CardDetail extends React.Component {
             <div className="row row-cols-1">
             <div className="col col-md-4">
               <div className="card">
-                {isMediaVideo(cardObject.mainMedia) 
+                {isMediaVideo(cardObject.mainMedia)
                   ? <video src={cardObject.mainMedia} className="card-img-top" controls={true} playsInline={true}/>
                   : <img src={cardObject.mainMedia} className="card-img-top" alt=""/>
                 }

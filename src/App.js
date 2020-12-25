@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/scroll-to-top';
 import Nav from './components/nav';
@@ -11,6 +12,9 @@ import { ANCHOR, API_HOST } from './utils/constants';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+
+    ReactGA.initialize('UA-69825844-1');
+
     this.state = {
       error: null,
       isLoaded: false,
@@ -40,6 +44,11 @@ export default class App extends React.Component {
             this.setState({
               isLoaded: true,
               error
+            });
+
+            ReactGA.exception({
+              description: `API error ocurred: ${error.message}`,
+              fatal: true
             });
           }
         }
@@ -86,17 +95,17 @@ export default class App extends React.Component {
           {model.contactInfo && <Nav collection={model.contactInfo} />}
           <main className="overflow-x-hidden">
             <Switch>
-              <Route 
+              <Route
                 exact
-                path="/" 
+                path="/"
                 render={props => (<Home {...props} model={model}/>)}
               />
-              <Route 
-                path="/workexp/:id" 
+              <Route
+                path="/workexp/:id"
                 render={props => (model.workExp && <CardDetail {...props} collection={model.workExp.cards} type={ANCHOR.WORKEXP}/>)}
               />
-              <Route 
-                path="/projects/:id" 
+              <Route
+                path="/projects/:id"
                 render={props => (model.projects && <CardDetail {...props} collection={model.projects.cards} type={ANCHOR.PROJECTS}/>)}
               />
               <Route component={PageNotFound} />

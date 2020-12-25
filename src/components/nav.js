@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import { HashLink as Link } from 'react-router-hash-link';
 import { ANCHOR } from '../utils/constants';
 import { hashLinkUrl } from '../utils/hash-link-url';
@@ -44,7 +45,8 @@ export default class Nav extends React.Component {
           <div className="dropdown">
             <button
               className="btn btn-link dropdown-toggle"
-              type="button" id="contactDropdownMenu"
+              type="button"
+              id="contactDropdownMenu"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
@@ -54,7 +56,16 @@ export default class Nav extends React.Component {
             <div className="dropdown-menu dropdown-menu-md-left dropdown-menu-lg-right" aria-labelledby="contactDropdownMenu">
               {this.props.collection.map(item => {
                 return (
-                  <a key={item.type} className="dropdown-item" href={item.href} target="_blank">{item.type}</a>
+                  <div key={item.type}>
+                    <ReactGA.OutboundLink
+                      eventLabel={item.type}
+                      to={item.href}
+                      target="_blank"
+                      className="dropdown-item"
+                    >
+                      {item.type}
+                    </ReactGA.OutboundLink>
+                  </div>
                 );
               })}
               <div className="dropdown-divider"></div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 
 export default class Footer extends React.Component {
   render() {
@@ -12,10 +13,15 @@ export default class Footer extends React.Component {
             {this.props.collection.map((item) => {
               return (
                 <div key={item.type}>
-                  <a href={item.href} target="_blank" className="d-flex flex-column align-items-center">
+                  <ReactGA.OutboundLink
+                    eventLabel={item.type}
+                    to={item.href}
+                    target="_blank"
+                    className="d-flex flex-column align-items-center"
+                  >
                     <img src={item.imgSrc} height="50" alt={item.type}/>
                     {item.type}
-                  </a>
+                  </ReactGA.OutboundLink>
                 </div>
               );
             })}
