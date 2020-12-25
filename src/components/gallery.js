@@ -45,7 +45,7 @@ export default class Gallery extends React.Component {
               ReactGA.event({
                 category: 'Gallery Modal',
                 action: 'Previous',
-                value: `${window.location.pathname}/modal/${index}`
+                label: `${window.location.pathname}/modal/${index}`,
               });
             }}
             onMoveNextRequest={() => {
@@ -56,7 +56,7 @@ export default class Gallery extends React.Component {
               ReactGA.event({
                 category: 'Gallery Modal',
                 action: 'Next',
-                value: `${window.location.pathname}/modal/${index}`
+                label: `${window.location.pathname}/modal/${index}`,
               });
             }}
           />
