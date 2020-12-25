@@ -47,7 +47,7 @@ export default class App extends React.Component {
             });
 
             ReactGA.exception({
-              description: `API error ocurred: ${error.message}`,
+              description: `Lite model API error ocurred: ${error.message}`,
               fatal: true
             });
           }
@@ -67,6 +67,11 @@ export default class App extends React.Component {
           this.setState({
             isLoaded: true,
             error
+          });
+
+          ReactGA.exception({
+            description: `Full model API error ocurred: ${error.message}`,
+            fatal: true
           });
         }
       )
