@@ -14,19 +14,33 @@ export default class CardDetail extends React.Component {
   }
 
   render() {
+    const maxCollection = 4;
     const urlParamId = parseInt(this.props.match.params.id);
     const cardObject = this.props.collection.find(item => item.cardId === urlParamId);
     const linkToUrl = hashLinkUrl(this.props.type);
     const homeAnchor = hashLinkUrl(ANCHOR.HOME);
     const hasGallery = cardObject.gallery.length > 0;
 
+    // next and previous controls
+    const nextId = parseInt(this.props.match.params.id)+ 1;
+    const prevId = parseInt(this.props.match.params.id) - 1;
+    const useNextId = nextId > maxCollection ? 1 : nextId;
+    const usePrevId = prevId < 1 ? maxCollection : prevId;
+    const nextUrl = `/${this.props.type}/${useNextId}`;
+    const prevUrl = `/${this.props.type}/${usePrevId}`;
+
     return (
       <div>
         <nav aria-label="breadcrumb">
-          <ol className="breadcrumb">
-            <li className="breadcrumb-item"><Link to={homeAnchor}>{capitalize(ANCHOR.HOME)}</Link></li>
-            <li className="breadcrumb-item"><Link to={linkToUrl}>{capitalize(this.props.type)}</Link></li>
-            <li className="breadcrumb-item active" aria-current="page">{cardObject.title}</li>
+          <ol className="breadcrumb d-flex justify-content-between">
+            <div className="d-flex align-items-center">
+              <li className="breadcrumb-item"><Link to={homeAnchor}>{capitalize(ANCHOR.HOME)}</Link></li>
+              <li className="breadcrumb-item"><Link to={linkToUrl}>{capitalize(this.props.type)}</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">{cardObject.title}</li>
+            </div>
+            <div>
+              <Link className="pr-2" to={prevUrl}>Previous</Link>/<Link className="pl-2" to={nextUrl}>Next</Link>
+            </div>
           </ol>
         </nav>
 
