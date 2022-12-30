@@ -5,7 +5,7 @@ import { ANCHOR } from '../utils/constants';
 import { capitalize } from '../utils/capitalize';
 import { hashLinkUrl } from '../utils/hash-link-url';
 import { isMediaVideo } from '../utils/is-media-video';
-import Gallery from './gallery';
+import Gallery from './gallery.tsx';
 
 export default class CardDetail extends React.Component {
   constructor(props) {

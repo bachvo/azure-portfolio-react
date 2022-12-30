@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-import CardCollection from './card-collection';
+import CardCollection from './card-collection.tsx';
 import { createMarkup } from '../utils/create-markup';
 import { ANCHOR } from '../utils/constants';
 

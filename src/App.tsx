@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ScrollToTop from './components/scroll-to-top';
-import Nav from './components/nav';
-import Home from './components/home';
-import CardDetail from './components/card-detail';
-import Footer from './components/footer';
-import PageNotFound from './components/page-not-found';
+import ScrollToTop from './components/scroll-to-top.tsx';
+import Nav from './components/nav.tsx';
+import Home from './components/home.tsx';
+import CardDetail from './components/card-detail.tsx';
+import Footer from './components/footer.tsx';
+import PageNotFound from './components/page-not-found.tsx';
 import { ANCHOR, API_HOST } from './utils/constants';
 
 export default class App extends React.Component {
