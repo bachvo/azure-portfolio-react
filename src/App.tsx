@@ -7,7 +7,7 @@ import Home from './components/home.tsx';
 import CardDetail from './components/card-detail.tsx';
 import Footer from './components/footer.tsx';
 import PageNotFound from './components/page-not-found.tsx';
-import { ANCHOR, API_HOST } from './utils/constants';
+import { ANCHOR, API_HOST } from './utils/constants.tsx';
 
 export default class App extends React.Component {
   constructor(props) {

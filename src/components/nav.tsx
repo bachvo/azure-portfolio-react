@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 import { HashLink as Link } from 'react-router-hash-link';
-import { ANCHOR } from '../utils/constants';
-import { hashLinkUrl } from '../utils/hash-link-url';
+import { ANCHOR } from '../utils/constants.tsx';
+import { hashLinkUrl } from '../utils/hash-link-url.tsx';
 
 export default class Nav extends React.Component {
   render() {

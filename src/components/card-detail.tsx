@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 import { HashLink as Link } from 'react-router-hash-link';
-import { ANCHOR } from '../utils/constants';
-import { capitalize } from '../utils/capitalize';
-import { hashLinkUrl } from '../utils/hash-link-url';
-import { isMediaVideo } from '../utils/is-media-video';
+import { ANCHOR } from '../utils/constants.tsx';
+import { capitalize } from '../utils/capitalize.tsx';
+import { hashLinkUrl } from '../utils/hash-link-url.tsx';
+import { isMediaVideo } from '../utils/is-media-video.tsx';
 import Gallery from './gallery.tsx';
 
 export default class CardDetail extends React.Component {
