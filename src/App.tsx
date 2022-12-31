@@ -10,12 +10,10 @@ import PageNotFound from './components/page-not-found';
 import { ANCHOR, API_HOST } from './utils/constants';
 import { Model } from './data/model';
 
-interface Props {
-  foo: number
-}
+interface Props {}
 interface Error {
   state: boolean;
-  message?: string;
+  message: string;
 }
 
 interface State {
@@ -44,6 +42,7 @@ export default class App extends React.Component<Props, State> {
         model: data,
         error: {
           state: false,
+          message: '',
         }
       });
     } catch(error) {
