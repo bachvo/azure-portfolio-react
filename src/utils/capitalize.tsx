@@ -4,6 +4,6 @@
  * @param {string} str - some string
  * @return {string} same string, but the first char is capitalized
  */
-export function capitalize(str){
+export function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }

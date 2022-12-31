@@ -5,6 +5,6 @@
  * @param {string} text - the text that may contain markup
  * @return {object} returns an object so dangerouslySetInnerHTML can consume
  */
-export function createMarkup(text) {
+export function createMarkup(text: string) {
   return { __html: text };
 }

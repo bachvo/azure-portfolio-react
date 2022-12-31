@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-import CardCollection from './card-collection.tsx';
-import { createMarkup } from '../utils/create-markup.tsx';
-import { ANCHOR } from '../utils/constants.tsx';
+import CardCollection from './card-collection';
+import { createMarkup } from '../utils/create-markup';
+import { ANCHOR } from '../utils/constants';
 
 export default class Home extends React.Component {
   constructor(props) {

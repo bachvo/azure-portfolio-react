@@ -1,91 +1,75 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ScrollToTop from './components/scroll-to-top.tsx';
-import Nav from './components/nav.tsx';
-import Home from './components/home.tsx';
-import CardDetail from './components/card-detail.tsx';
-import Footer from './components/footer.tsx';
-import PageNotFound from './components/page-not-found.tsx';
-import { ANCHOR, API_HOST } from './utils/constants.tsx';
+import ScrollToTop from './components/scroll-to-top';
+import Nav from './components/nav';
+import Home from './components/home';
+import CardDetail from './components/card-detail';
+import Footer from './components/footer';
+import PageNotFound from './components/page-not-found';
+import { ANCHOR, API_HOST } from './utils/constants';
+import { Model } from './data/model';
 
-export default class App extends React.Component {
+interface Props {
+  foo: number
+}
+interface Error {
+  state: boolean;
+  message?: string;
+}
+
+interface State {
+  isLoaded: boolean;
+  error: Error;
+  model: Model
+}
+
+export default class App extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
     ReactGA.initialize('UA-69825844-1');
-
-    this.state = {
-      error: null,
-      isLoaded: false,
-      model: {},
-    };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const fullModel = `${API_HOST}/api/main`;
-    const liteModel = `${API_HOST}/api/main-lite`;
 
-    fetch(liteModel)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          // if full model returns first, do not reset model
-          if (!this.state.model.profile) {
-            this.setState({
-              isLoaded: true,
-              model: result.data
-            });
-          }
-        },
-        (error) => {
-          // if full model returns first, do not show error
-          if (!this.state.model.profile) {
-            this.setState({
-              isLoaded: true,
-              error
-            });
+    try {
+      const responseData = await fetch(fullModel);
+      const jsonData = await responseData.json();
+      const data = await jsonData.data as Model;
 
-            ReactGA.exception({
-              description: `Lite model API error ocurred: ${error.message}`,
-              fatal: true
-            });
-          }
+      this.setState({
+        isLoaded: true,
+        model: data,
+        error: {
+          state: false,
         }
-      )
-
-    fetch(fullModel)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            model: result.data
-          });
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-
-          ReactGA.exception({
-            description: `Full model API error ocurred: ${error.message}`,
-            fatal: true
-          });
+      });
+    } catch(error) {
+      this.setState({
+        isLoaded: true,
+        error: {
+          state: true,
+          message: error.message,
         }
-      )
+      });
+
+      ReactGA.exception({
+        description: `Full model API error ocurred: ${error.message}`,
+        fatal: true
+      });
+    }
   }
 
   render() {
-    const { error, isLoaded, model } = this.state;
-    if (error) {
+    if (this.state?.error.state) {
       return (
         <div className="alert alert-danger" role="alert">
-          Error: {error.message}
+          Error: {this.state.error.message}
         </div>
       );
-    } else if (!isLoaded) {
+    } else if (!this.state ?? !this.state?.isLoaded) {
       return (
         <div className="text-center my-5">
           <div className="spinner-border" role="status">
@@ -93,29 +77,29 @@ export default class App extends React.Component {
           </div>
         </div>
       );
-    } else {
+    } else if (this.state.model && Object.keys(this.state.model).length > 0) {
       return (
         <Router>
           <ScrollToTop />
-          {model.contactInfo && <Nav collection={model.contactInfo} />}
+          {this.state.model.contactInfo && <Nav collection={this.state.model.contactInfo} />}
           <main className="overflow-x-hidden">
             <Switch>
               <Route
                 exact
                 path="/"
-                render={props => (<Home {...props} model={model}/>)}
+                render={props => (<Home {...props} model={this.state.model}/>)}
               />
               <Route
                 path="/workexp/:id"
-                render={props => (model.workExp && <CardDetail {...props} collection={model.workExp.cards} type={ANCHOR.WORKEXP}/>)}
+                render={props => (this.state.model.workExp && <CardDetail {...props} collection={this.state.model.workExp.cards} type={ANCHOR.WORKEXP}/>)}
               />
               <Route
                 path="/projects/:id"
-                render={props => (model.projects && <CardDetail {...props} collection={model.projects.cards} type={ANCHOR.PROJECTS}/>)}
+                render={props => (this.state.model.projects && <CardDetail {...props} collection={this.state.model.projects.cards} type={ANCHOR.PROJECTS}/>)}
               />
               <Route component={PageNotFound} />
             </Switch>
-            {model.profile && <Footer collection={model.contactInfo} fullName={model.profile.fullName} />}
+            {this.state.model.profile && <Footer collection={this.state.model.contactInfo} fullName={this.state.model.profile.fullName} />}
           </main>
         </Router>
       );

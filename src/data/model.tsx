@@ -1,7 +1,62 @@
-export const model = {
+type Skills = {
+  title: string
+  imgSrc: string
+  description: string
+}
+
+type Contact = {
+  type: string
+  href: string
+  imgSrc: string
+}
+
+type Gallery = {
+  src: string
+  thumbnailSrc: string
+  caption: string
+}
+
+type Card = {
+  cardId: number
+  title: string
+  website?: string
+  description: string
+  position: string
+  role: string
+  skills: string
+  imgSrc: string
+  imageDescription: string
+  mainMedia: string
+  gallery: Gallery[]
+}
+
+type Collection = {
+  title: string
+  description: string
+  cards: Card[]
+}
+
+export type Model = {
+  intro: {
+    title: string
+    description: string
+  }
+  profile: {
+    fullName: string,
+    occupation: string
+    imgSrc: string
+    description: string
+  }
+  skills: Skills[]
+  workExp: Collection
+  projects: Collection
+  contactInfo: Contact[]
+}
+
+export const data: Model = {
   intro: {
     title: 'Web Developer and Designer',
-    description: 'Hello, I am a web developer and designer currently living in the San Fransisco Bay Area. I have a keen interest in user interface and user experience design as well as programming and web development. This site is built on <a href="https://reactjs.org/" target="_blank" class="no-highlight"><strong>React.js</strong></a> + <a href="http://getbootstrap.com/" target="_blank" class="no-highlight"><strong>Bootstrap</strong></a> and is hosted in the cloud on <a href="https://azure.microsoft.com/en-us/overview/" target="_blank" class="no-highlight"><strong>Azure</strong></a>. All of the graphics you see on this site were created and designed by me. Scroll down to see more.', 
+    description: 'Hello, I am a web developer and designer currently living in the San Fransisco Bay Area. I have a keen interest in user interface and user experience design as well as programming and web development. This site is built on <a href="https://reactjs.org/" target="_blank" class="no-highlight"><strong>React.js</strong></a> + <a href="http://getbootstrap.com/" target="_blank" class="no-highlight"><strong>Bootstrap</strong></a> and is hosted in the cloud on <a href="https://azure.microsoft.com/en-us/overview/" target="_blank" class="no-highlight"><strong>Azure</strong></a>. All of the graphics you see on this site were created and designed by me. Scroll down to see more.',
   },
 
   profile: {
@@ -33,7 +88,7 @@ export const model = {
     title: 'Work Experience',
     description: 'My work experience includes several different types of organizations ranging from non-profit organizations to large global corporations. The variety of small and large companies in my past experience has allowed me to be very agile with my skillset, where I am able to quickly adapt to different teams and develop my soft skills.',
     cards: [
-      { 
+      {
         cardId: 1,
         title: 'LinkedIn',
         website: 'https://www.linkedin.com',
@@ -46,13 +101,13 @@ export const model = {
         skills: 'JavaScript, HTML, CSS, Ember.js',
         mainMedia: '/images/workexp_linkedin.png',
       },
-      { 
+      {
         cardId: 2,
         title: 'CopperTree Analytics',
         website: 'https://www.coppertreeanalytics.com',
         description: 'CopperTree Analytics is a software as a service company that solves energy management issues through technology that automatically checks the integrity of a clients Building Automation System (BAS) while pinpointing system inefficiencies. It compares the data gathered from a clients system to a defined baseline and highlights any changes. The CopperTree technology is achieved through the three step process of: Acquire, Analyze, and Advise.',
         position: 'Web Designer Intern',
-        role: 'At CopperTree Analytics, I was a web designer who specialized in user interface design and developement. Because of my diverse set of design and programming skills, I am tasked with various roles to create low to high fidelity mock-ups and later implementing my designs using modern web technologies. When creating low and high fidelity mock-ups, I use tools such as Balsamiq, Illustrator, and Photoshop to create the interface of a system, focusing on a user-centered design. With these tools, I can iterate through mock-ups at a rapid pace in order to identify any issues that might occur later in the development cycle. I also test the low and high fidelity mock-ups by conducting user testing to examine the usability of the feature. In the development phase, I use Node.js as the application foundation and AngularJS to build controllers and API\’s to serve data to the client side, from databases such as MongoDB and PostgreSQL. Once the data is retrieved from the server I can build all necessary components that help complete the user interface with the correct data being served to the view.',
+        role: 'At CopperTree Analytics, I was a web designer who specialized in user interface design and developement. Because of my diverse set of design and programming skills, I am tasked with various roles to create low to high fidelity mock-ups and later implementing my designs using modern web technologies. When creating low and high fidelity mock-ups, I use tools such as Balsamiq, Illustrator, and Photoshop to create the interface of a system, focusing on a user-centered design. With these tools, I can iterate through mock-ups at a rapid pace in order to identify any issues that might occur later in the development cycle. I also test the low and high fidelity mock-ups by conducting user testing to examine the usability of the feature. In the development phase, I use Node.js as the application foundation and AngularJS to build controllers and API’s to serve data to the client side, from databases such as MongoDB and PostgreSQL. Once the data is retrieved from the server I can build all necessary components that help complete the user interface with the correct data being served to the view.',
         imgSrc: '/images/workexp_coppertree.png',
         imageDescription: 'CopperTree',
         gallery: [
@@ -70,13 +125,13 @@ export const model = {
         skills: 'JavaScript, HTML, CSS, Balsamiq, Illustrator, Photoshop, Node.js, Angular.js, MongoDB',
         mainMedia: '/images/workexp_coppertree.png',
       },
-      { 
+      {
         cardId: 3,
         title: 'BlackBerry',
         website: 'https://www.blackberry.com',
         description: 'An award winning fortune 500 company, Blackberry is a Canadian telecommunication and wireless equipment manufacturer, based in Waterloo, Ontario. It is best known as the developer of the BlackBerry brand of smartphones and tablets but also well known worldwide as a provider of secure & high reliability software for industrial applications and Mobile Device Management (MDM).',
         position: 'Graphic Designer Intern',
-        role: 'At BlackBerry, I was hired on the team as a graphic designer who specialized in print and web design for our team and marketing department. I was tasked with various roles to create print and web material such as posters, flyers, brochures, websites, and HTML emails. When creating print material, I worked closely with my brand manager to design high quality and beautiful print material that was used in BlackBerry\’s marketing campaign. I used tools such as Illustrator, Photoshop, and InDesign for the majority of my designs. I also used JavaScript and HTML + CSS to build internal websites for corporate teams and built HTML emails that were used for internal and external marketing campaigns.',
+        role: 'At BlackBerry, I was hired on the team as a graphic designer who specialized in print and web design for our team and marketing department. I was tasked with various roles to create print and web material such as posters, flyers, brochures, websites, and HTML emails. When creating print material, I worked closely with my brand manager to design high quality and beautiful print material that was used in BlackBerry’s marketing campaign. I used tools such as Illustrator, Photoshop, and InDesign for the majority of my designs. I also used JavaScript and HTML + CSS to build internal websites for corporate teams and built HTML emails that were used for internal and external marketing campaigns.',
         imgSrc: '/images/workexp_blackberry.png',
         imageDescription: 'BlackBerry',
         gallery: [
@@ -94,7 +149,7 @@ export const model = {
         skills: 'JavaScript, HTML, CSS, Illustrator, Photoshop, InDesign',
         mainMedia: '/images/workexp_blackberry.png',
       },
-      { 
+      {
         cardId: 4,
         title: 'Downtown Surrey BIA',
         website: 'http://downtownsurreybia.com/',
@@ -120,7 +175,7 @@ export const model = {
     title: 'Projects',
     description: 'My projects include a variety of school projects that I have completed during my undergrad at Simon Fraser University and non-profit organizations that help the community.',
     cards: [
-      { 
+      {
         cardId: 1,
         title: 'Ventus',
         description: 'Ventus is an ambient heating device drawn from inspirations of past precedents of early 1950\'s design and heating/cooling devices. Ventus is primarily made of acrylic because the material is durable, light weight and strong enough to be hung from the ceiling. The rods that extend down from the platform are made of wood and the blades that are attached to the rods are hand made from MDF wood and paper. Arduino was implemented to power the rods and fans and from there, mobile devices were explored to create interactivity with the user. A Bluetooth chip Arduino microcontroller is used to calculate the accelerometer of the users phone to activate and de-activate the fan as the user interacts with his/her phone. The rods rotate from 4 servo motors that are attached to gears to be able to spin 13 rods. Users can control which direction the fan rotates as well as the speed of the rotation by simply moving the phone in the same direction and the degree in which the phone is tilted.',
@@ -246,7 +301,7 @@ export const model = {
         imageDescription: 'Manifesto',
         mainMedia: '/gallery/manifesto/manifesto-mockup-1.jpg',
      },
-     { 
+     {
         cardId: 4,
         title: 'FoodiesUnited',
         website: 'https://www.foodiesunited.org/',

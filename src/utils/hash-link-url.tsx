@@ -4,6 +4,6 @@
  * @param {string} anchor - the anchor hash
  * @return {string} returns a url string concat with anchor hash
  */
-export function hashLinkUrl(anchor){
+export function hashLinkUrl(anchor: string): string {
   return `/#${anchor}`;
 }
