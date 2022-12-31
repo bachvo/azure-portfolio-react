@@ -10,7 +10,9 @@ import PageNotFound from './components/page-not-found';
 import { ANCHOR, API_HOST } from './utils/constants';
 import { Model } from './data/model';
 
-interface Props {}
+interface Props {
+  foo: string
+}
 interface Error {
   state: boolean;
   message: string;
