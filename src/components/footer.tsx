@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactGA from 'react-ga';
+import { Contact } from '../data/model';
 
-export default class Footer extends React.Component {
+interface Props {
+  collection: Contact[]
+  fullName: string
+}
+export default class Footer extends React.Component<Props> {
   render() {
     const date = new Date();
     const currentYear = date.getFullYear();

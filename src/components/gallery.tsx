@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 import Lightbox from 'react-image-lightbox';
+import { Gallery } from '../data/model';
+interface Props {
+  images: Gallery[]
+}
 
-export default class Gallery extends React.Component {
+interface State {
+  isOpen: boolean;
+  photoIndex: number;
+}
+export default class GalleryComponent extends React.Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {

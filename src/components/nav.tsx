@@ -3,8 +3,12 @@ import ReactGA from 'react-ga';
 import { HashLink as Link } from 'react-router-hash-link';
 import { ANCHOR } from '../utils/constants';
 import { hashLinkUrl } from '../utils/hash-link-url';
+import { Contact } from '../data/model';
 
-export default class Nav extends React.Component {
+interface Props {
+  collection: Contact[]
+}
+export default class Nav extends React.Component<Props> {
   render() {
     const aboutAnchor = hashLinkUrl(ANCHOR.ABOUT);
     const homeAnchor = hashLinkUrl(ANCHOR.HOME);

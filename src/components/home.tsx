@@ -3,8 +3,12 @@ import ReactGA from 'react-ga';
 import CardCollection from './card-collection';
 import { createMarkup } from '../utils/create-markup';
 import { ANCHOR } from '../utils/constants';
+import { Model } from '../data/model';
 
-export default class Home extends React.Component {
+interface Props {
+  model: Model
+}
+export default class Home extends React.Component<Props> {
   constructor(props) {
     super(props);
     ReactGA.pageview(`${window.location.pathname}`);

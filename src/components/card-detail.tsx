@@ -6,8 +6,17 @@ import { capitalize } from '../utils/capitalize';
 import { hashLinkUrl } from '../utils/hash-link-url';
 import { isMediaVideo } from '../utils/is-media-video';
 import Gallery from './gallery';
-
-export default class CardDetail extends React.Component {
+import { Card } from '../data/model';
+interface Props {
+  match: {
+    params: {
+      id: string
+    }
+  }
+  type: string
+  collection: Card[]
+}
+export default class CardDetail extends React.Component<Props> {
   constructor(props) {
     super(props);
     ReactGA.pageview(`${window.location.pathname}`);
@@ -16,7 +25,7 @@ export default class CardDetail extends React.Component {
   render() {
     const maxCollection = 4;
     const urlParamId = parseInt(this.props.match.params.id);
-    const cardObject = this.props.collection.find(item => item.cardId === urlParamId);
+    const cardObject = this.props.collection.find(item => item.cardId === urlParamId) as Card;
     const linkToUrl = hashLinkUrl(this.props.type);
     const homeAnchor = hashLinkUrl(ANCHOR.HOME);
     const hasGallery = cardObject.gallery.length > 0;

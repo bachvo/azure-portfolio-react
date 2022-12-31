@@ -1,22 +1,22 @@
-type Skills = {
+export type Skills = {
   title: string
   imgSrc: string
   description: string
 }
 
-type Contact = {
+export type Contact = {
   type: string
   href: string
   imgSrc: string
 }
 
-type Gallery = {
+export type Gallery = {
   src: string
   thumbnailSrc: string
   caption: string
 }
 
-type Card = {
+export type Card = {
   cardId: number
   title: string
   website?: string
@@ -30,7 +30,7 @@ type Card = {
   gallery: Gallery[]
 }
 
-type Collection = {
+export type Collection = {
   title: string
   description: string
   cards: Card[]

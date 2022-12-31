@@ -1,7 +1,12 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-
-export default class CardCollection extends React.Component {
+import { Collection } from '../data/model';
+interface Props {
+  classNames: string
+  id: string
+  model: Collection
+}
+export default class CardCollection extends React.Component<Props> {
   render() {
     const concatClass = `${this.props.classNames} d-flex flex-column align-items-md-start align-items-lg-center px-2 py-4 p-md-5`
     return (
