@@ -14,10 +14,6 @@ import Nav from './components/nav';
 import Footer from './components/footer';
 import CardDetail from './components/card-detail';
 import PageNotFound from './components/page-not-found';
-
-interface Props {
-  foo: string
-}
 interface Error {
   state: boolean;
   message: string;
@@ -29,7 +25,7 @@ interface State {
   model: Model
 }
 
-export default class App extends React.Component<Props, State> {
+export default class App extends React.Component<any,State> {
   constructor(props) {
     super(props);
 
