@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet,
+ } from 'react-router-dom';
+import { API_HOST, ANCHOR } from './utils/constants';
+import { Model } from './data/model';
+import Home from './components/home';
 import ScrollToTop from './components/scroll-to-top';
 import Nav from './components/nav';
-import Home from './components/home';
-import CardDetail from './components/card-detail';
 import Footer from './components/footer';
+import CardDetail from './components/card-detail';
 import PageNotFound from './components/page-not-found';
-import { ANCHOR, API_HOST } from './utils/constants';
-import { Model } from './data/model';
 
 interface Props {
   foo: string
@@ -80,29 +85,21 @@ export default class App extends React.Component<Props, State> {
       );
     } else if (this.state.model && Object.keys(this.state.model).length > 0) {
       return (
-        <Router>
+        <BrowserRouter>
           <ScrollToTop />
-          {this.state.model.contactInfo && <Nav collection={this.state.model.contactInfo} />}
+          {this.state.model.contactInfo && <Nav model={this.state.model} collection={this.state.model.contactInfo} />}
           <main className="overflow-x-hidden">
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={props => (<Home {...props} model={this.state.model}/>)}
-              />
-              <Route
-                path="/workexp/:id"
-                render={props => (this.state.model.workExp && <CardDetail {...props} collection={this.state.model.workExp.cards} type={ANCHOR.WORKEXP}/>)}
-              />
-              <Route
-                path="/projects/:id"
-                render={props => (this.state.model.projects && <CardDetail {...props} collection={this.state.model.projects.cards} type={ANCHOR.PROJECTS}/>)}
-              />
-              <Route component={PageNotFound} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Outlet />}>
+                <Route index element={<Home model={this.state.model}/>} />
+                <Route path="/workexp/:id" element={<CardDetail collection={this.state.model.workExp.cards} type={ANCHOR.WORKEXP} />} />
+                <Route path="/projects/:id" element={<CardDetail collection={this.state.model.projects.cards} type={ANCHOR.PROJECTS} />} />
+                <Route path="*" element={<PageNotFound />} />
+              </Route>
+            </Routes>
             {this.state.model.profile && <Footer collection={this.state.model.contactInfo} fullName={this.state.model.profile.fullName} />}
           </main>
-        </Router>
+        </BrowserRouter>
       );
     }
   }

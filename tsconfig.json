@@ -1,12 +1,4 @@
 {
-  "compilerOptions": {
-    "extensions" : {
-      ".ts": "TS",
-      ".tsx": "TSX",
-      ".es": "JS",
-      ".js": "JSX"
-    }
-  },
   "include": [
     "./src/ts/**/*"
   ]

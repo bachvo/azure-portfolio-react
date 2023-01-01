@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import { Collection } from '../data/model';
 interface Props {
   classNames: string
@@ -19,7 +19,7 @@ export default class CardCollection extends React.Component<Props> {
             {this.props.model.cards.map((item, key) => {
               const url = `/${this.props.id}/${item.cardId}`
               return (
-                <Link key={key} to={url}>
+                <HashLink key={key} to={url}>
                   <div className="col mb-4">
                     <div className="card-collection__text-black card">
                       <img src={item.imgSrc} className="card-img-top" alt=""/>
@@ -29,7 +29,7 @@ export default class CardCollection extends React.Component<Props> {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </HashLink>
               );
             })}
           </div>

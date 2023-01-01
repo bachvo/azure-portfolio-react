@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import { ANCHOR } from '../utils/constants';
 import { hashLinkUrl } from '../utils/hash-link-url';
-import { Contact } from '../data/model';
+import { Model, Contact } from '../data/model';
 
 interface Props {
   collection: Contact[]
+  model: Model
 }
 export default class Nav extends React.Component<Props> {
   render() {
@@ -17,9 +18,9 @@ export default class Nav extends React.Component<Props> {
 
     return (
       <nav className="navbar sticky-top navbar-expand-md navbar-light bg-light nav--z-2">
-        <Link className="navbar-brand" to={homeAnchor}>
+        <HashLink className="navbar-brand" to={homeAnchor}>
           <img alt="" className="nav__logo-top-image" src="/images/logo-top.png"/>
-        </Link>
+        </HashLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -34,16 +35,16 @@ export default class Nav extends React.Component<Props> {
         <div className="collapse navbar-collapse" id="navbarToggler">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to={homeAnchor}>Home</Link>
+              <HashLink className="nav-link" to={homeAnchor}>Home</HashLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={aboutAnchor}>About</Link>
+              <HashLink className="nav-link" to={aboutAnchor}>About</HashLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={workexpAnchor}>Work Experience</Link>
+              <HashLink className="nav-link" to={workexpAnchor}>Work Experience</HashLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={projectsAnchor}>Projects</Link>
+              <HashLink className="nav-link" to={projectsAnchor}>Projects</HashLink>
             </li>
           </ul>
           <div className="dropdown">
